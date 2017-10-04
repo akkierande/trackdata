@@ -1,0 +1,205 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <!--Page Title-->
+    <title>Home</title>
+
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" title="Favicon"/>
+
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="{% static '/tracksheet/dist/css/styletheme.css' %}">
+
+    <!-- Namari Color CSS -->
+    <link rel="stylesheet" href="{% static '/tracksheet/dist/css/namari-color.css' %}">
+
+    <!--Icon Fonts - Font Awesome Icons-->
+    <link rel="stylesheet" href="{% static 'tracksheet/bower_components/font-awesome/css/font-awesome.min.css'%}">
+
+    <!-- Animate CSS-->
+    <link href="{% static '/tracksheet/dist/css/animate.css' %}" rel="stylesheet" type="text/css">
+
+    <!--Google Webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <style>
+#banner {
+    background : url("/static/tracksheet/dist/banner-images/banner-image-1.jpg") no-repeat center top;
+    background-size:cover;
+}
+    </style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!--End of Preloader-->
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+
+    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5" style="background-position: center -8px;">
+
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <!--Logo-->
+                    <div id="logo">
+
+                        <!--Logo that is shown on the banner-->
+                        <img src="{% static '/tracksheet/dist/logo.png' %}" id="banner-logo" alt="TRKR-PRO"/>
+                        <!--End of Banner Logo-->
+
+                    </div>
+                    <!--End of Logo-->
+
+                    <aside>
+
+                        <!--Social Icons in Header-->
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
+                                    <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Google+" href="http://google.com/+username">
+                                    <i class="fa fa-google-plus fa-1x"></i><span>Google+</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Twitter" href="http://www.twitter.com/username">
+                                    <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Instagram" href="http://www.instagram.com/username">
+                                    <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="behance" href="http://www.behance.net">
+                                    <i class="fa fa-behance fa-1x"></i><span>Behance</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--End of Social Icons in Header-->
+
+                    </aside>
+
+                    <!--Main Navigation-->
+
+                    <!--End of Main Navigation-->
+
+                    <div id="nav-trigger"><span></span></div>
+                    <nav id="nav-mobile"></nav>
+
+                </div>
+            </div>
+        </div><!--End of Header-->
+
+        <!--Banner Content-->
+        <div id="banner-content" class="row clearfix">
+
+            <div class="col-38">
+
+                <div class="section-heading">
+                    <h1>A FREE AND SIMPLE TRACKING WEB-SITE</h1>
+                    <h2>Track Pro is free tool you can use for your projects. It is free to use for your
+                        personal and commercial projects, enjoy!</h2>
+                </div>
+
+                <!--Call to Action-->
+                <a href="/register/" class="button">SIGN-UP</a>&nbsp;<a href="/accounts/login/" class="button">LOG-IN</a>
+                <!--End Call to Action-->
+
+            </div>
+
+        </div><!--End of Row-->
+    </header>
+
+
+
+
+    <!--Footer-->
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix">
+            </br>
+            </br>
+
+
+            <p id="copyright" class="col-2">Made with <i class="fa fa-heart fa-1x"></i> by <a href="https://www.expertgs.com">Expert Global Solutions</a></p>
+
+            <!--Social Icons in Footer-->
+            <ul class="col-2 social-icons">
+                <li>
+                    <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
+                        <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="Google+" href="http://google.com/+username">
+                        <i class="fa fa-google-plus fa-1x"></i><span>Google+</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="Twitter" href="http://www.twitter.com/username">
+                        <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="Instagram" href="http://www.instagram.com/username">
+                        <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="behance" href="http://www.behance.net">
+                        <i class="fa fa-behance fa-1x"></i><span>Behance</span>
+                    </a>
+                </li>
+            </ul>
+            <!--End of Social Icons in Footer-->
+        </div>
+    </footer>
+    <!--End of Footer-->
+
+</div>
+
+<!-- Include JavaScript resources -->
+<script src="{% static '/tracksheet/dist/js/js/jquery.1.8.3.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/wow.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/featherlight.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/featherlight.gallery.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/jquery.enllax.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/jquery.scrollUp.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/jquery.easing.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/jquery.stickyNavbar.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/images-loaded.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/lightbox.min.js' %}"></script>
+<script src="{% static '/tracksheet/dist/js/js/site.js' %}"></script>
+
+
+</body>
+</html>
