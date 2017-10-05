@@ -20,7 +20,7 @@ class ImageFilter(FilterSet):
         model = Image
         fields = {
             'image_name': ['exact', 'contains'],
-            # 'tz': ['exact'],
+            #'tz': ['exact'],
         }
 
 
