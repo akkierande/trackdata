@@ -1,5 +1,5 @@
 from django_filters import FilterSet
-from .models import Package,Image,Project
+from .models import Package,Image,Project,Checkout
 
 class PackageFilter(FilterSet):
 
@@ -32,5 +32,14 @@ class ProjectFilter(FilterSet):
         model = Project
         fields = {
             'project_name': ['exact', 'contains'],
+            # 'tz': ['exact'],
+        }
+
+class CheckoutFilter(FilterSet):
+
+    class Meta:
+        model = Checkout
+        fields = {
+            'image_status': ['exact', 'contains'],
             # 'tz': ['exact'],
         }
