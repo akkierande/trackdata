@@ -21,12 +21,13 @@ from django_tables2.utils import A
 #         #template_name = 'tracksheet/image_table.html'
 
 class ImageTable(tables.Table):
-    Image.image_name = tables.LinkColumn('image_name', args=[A('pk')])
+    column = tables.LinkColumn('image_edit',args=[A('pk')])
+    #Image.image_name = tables.LinkColumn('image_name', args=[A('pk')])
     class Meta:
         model = Image
-        row_attrs = {'image_id': lambda record: record.pk}
-        name = tables.LinkColumn('image_edit', text=lambda image: image.image_name, args=[A('pk')])
-        edit_entries = tables.TemplateColumn('<a href="/tracksheet/image/{{image.image_name}}">Edit</a>')
+        #row_attrs = {'image_id': lambda record: record.pk}
+        #name = tables.LinkColumn('image_edit', text=lambda image: image.image_name, args=[A('pk')])
+        #edit_entries = tables.TemplateColumn('<a href="/tracksheet/image/{{image.image_name}}">Edit</a>')
         exclude = ['created_at', 'updated_at','created_by','updated_by']
         empty_text = "There are no Images matching the search criteria..."
         #template_name = 'tracksheet/image_table.html'
