@@ -8,8 +8,8 @@ from django.core.urlresolvers import reverse
 from .models import *
 from .forms import *
 
-from .tables import ImageTable
-from .filters import PackageFilter, ImageFilter, ProjectFilter
+from .tables import ImageTable,CheckoutTable
+from .filters import PackageFilter, ImageFilter,CheckoutFilter, ProjectFilter
 from django_tables2 import RequestConfig, SingleTableView
 from django_filters.views import FilterView
 from django_tables2.export.views import ExportMixin
@@ -108,7 +108,13 @@ class Image_View(FilterView, ExportMixin, SingleTableView):
     template_name = 'tracksheet/table.html'
     filterset_class = ImageFilter
 
-#
+class Checkout(FilterView, ExportMixin, SingleTableView):
+    table_class = CheckoutTable
+    model = Checkout
+    template_name = 'tracksheet/table.html'
+    filterset_class = CheckoutFilter
+
+        #
 # class Project_View(FilterView, ExportMixin, SingleTableView):
 #     table_class = ProjectTable
 #     model = Project
