@@ -1,5 +1,5 @@
 import django_tables2 as tables
-from .models import Image
+from .models import Image,Checkout
 from django_tables2.utils import A
 
 # class PackageTable(tables.Table):
@@ -21,13 +21,40 @@ from django_tables2.utils import A
 #         #template_name = 'tracksheet/image_table.html'
 
 class ImageTable(tables.Table):
-    Image.image_name = tables.LinkColumn('image_name', args=[A('pk')])
+
+    #Image.image_name = tables.LinkColumn('image_name', args=[A('pk')])
+    #name = tables.LinkColumn('image_edit', text=lambda image: image.image_name, args=[A('pk')])
+    Image_Name = tables.LinkColumn('image_edit', args=[A('pk')],text=lambda image: image.image_name, orderable=True, empty_values=())
+
     class Meta:
         model = Image
-        row_attrs = {'image_id': lambda record: record.pk}
-        name = tables.LinkColumn('image_edit', text=lambda image: image.image_name, args=[A('pk')])
-        edit_entries = tables.TemplateColumn('<a href="/tracksheet/image/{{image.image_name}}">Edit</a>')
-        exclude = ['created_at', 'updated_at','created_by','updated_by']
+
+        #row_attrs = {'image_id': lambda record: record.pk}
+
+        #edit_entries = tables.TemplateColumn('<a href="/tracksheet/image/{{image.image_name}}">Edit</a>')
+        exclude = ['created_at', 'updated_at','created_by','updated_by','image_name']
         empty_text = "There are no Images matching the search criteria..."
+
+        sequence = ('Image_Name','image_type')
+        #template_name = 'tracksheet/image_table.html'
+
+
+
+class CheckoutTable(tables.Table):
+
+    #Image.image_name = tables.LinkColumn('image_name', args=[A('pk')])
+    #name = tables.LinkColumn('image_edit', text=lambda image: image.image_name, args=[A('pk')])
+    Image_Id = tables.LinkColumn('image_edit', args=[A('pk')],text=lambda image: image.image_id, orderable=True, empty_values=())
+
+    class Meta:
+        model = Checkout
+
+        #row_attrs = {'image_id': lambda record: record.pk}
+
+        #edit_entries = tables.TemplateColumn('<a href="/tracksheet/image/{{image.image_name}}">Edit</a>')
+        exclude = ['created_at', 'updated_at','created_by','updated_by','image_name']
+        #empty_text = "There are no Images matching the search criteria..."
+
+        #sequence = ('Image_Name','image_type')
         #template_name = 'tracksheet/image_table.html'
 
