@@ -40,6 +40,6 @@ class CheckoutFilter(FilterSet):
     class Meta:
         model = Checkout
         fields = {
-            'image_status': ['exact', 'contains'],
+            'image_objects': ['exact', 'contains'],
             # 'tz': ['exact'],
         }

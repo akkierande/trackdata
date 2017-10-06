@@ -48,11 +48,12 @@ class CheckoutTable(tables.Table):
 
     class Meta:
         model = Checkout
+        sequence = ('id','Image_Id')
 
         #row_attrs = {'image_id': lambda record: record.pk}
 
         #edit_entries = tables.TemplateColumn('<a href="/tracksheet/image/{{image.image_name}}">Edit</a>')
-        exclude = ['created_at', 'updated_at','created_by','updated_by','image_name']
+        #exclude = ['created_at', 'updated_at','created_by','updated_by','Image.image.id']
         #empty_text = "There are no Images matching the search criteria..."
 
         #sequence = ('Image_Name','image_type')

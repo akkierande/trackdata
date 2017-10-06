@@ -7,6 +7,8 @@
 {% load bootstrap3 %}
 {% bootstrap_css %}
 {% block body %}
+{% load crispy_forms_tags %}
+
 <!-- Small boxes (Stat box) -->
 
     <!-- /.row -->
@@ -22,6 +24,12 @@
                     <a class="btn btn-app">
                     <i class="fa fa-mail-forward" data-toggle="modal" data-target="#myModal" ></i> Check-OUT
                     </a>
+
+
+
+
+
+
                     <a class="btn btn-app">
                         <i class="fa fa-plus" data-toggle="modal" data-target="#myModal" ></i> Add
                     </a>
@@ -34,22 +42,23 @@
                     </div>
                     <!-- Trigger the modal with a button -->
                             <!-- Modal -->
-                            <div id="myModal" class="modal fade" role="dialog">
-                                <div class="modal-dialog">
+
 
                                     <!-- Modal content-->
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Modal Header</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Some text in the modal.</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close
-                                            </button>
-                                        </div>
+                                    <div class="modal hide" id="myModal">
+                                        <form class="well" method="post" >
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            <h3>Editing Contact</h3>
+                                          </div>
+                                          <div class="modal-body">
+                                             <p>ho</p>
+                                          </div>
+                                          <div class="modal-footer">
+                                               <input class="btn btn-primary" type="submit" value="Save" />
+                                               <input name="cancel" class="btn" type="submit" value="Cancel"/>
+                                          </div>
+                                        </form>
                                     </div>
 
                                 </div>

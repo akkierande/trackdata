@@ -29,7 +29,7 @@ class RegistrationForm(UserCreationForm):
 
 
 
-class RenewBookForm(forms.Form):
+class CheckoutForm(forms.Form):
     renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 
     def clean_renewal_date(self):
@@ -45,3 +45,4 @@ class RenewBookForm(forms.Form):
 
         # Remember to always return the cleaned data.
         return data
+
