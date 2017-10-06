@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_filters',
     'bootstrap3',
     'django_tables2',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,4 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/tracksheet/'
 LOGOUT_REDIRECT_URL = '/'
+#CRISPY_TEMPLATE_PACK = 'uni_form'

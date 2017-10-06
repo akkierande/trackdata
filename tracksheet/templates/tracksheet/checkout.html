@@ -1,0 +1,21 @@
+{% extends 'tracksheet/base.html' %}
+{% load render_table from django_tables2 %}
+{% block title %}Home/Tables{% endblock %}
+{% block page %}Dashboard{% endblock %}
+{% block description %}Details{% endblock %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% block body %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+
+
+<form action="" method="post">{% csrf_token %}
+    {{ form | crispy}}
+      <br>
+<button type="button" class="btn btn-primary btn-lg">Submit</button>
+</form>
+
+</div>
+{% endblock %}

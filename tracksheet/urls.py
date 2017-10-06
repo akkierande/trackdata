@@ -1,6 +1,6 @@
 from django.conf.urls import url,include
 from . import views
-from .views import Image_View,Checkout
+from .views import Image_View,CheckoutCreateView,Checkout
 
 
 urlpatterns = [
@@ -14,8 +14,8 @@ urlpatterns = [
     #url(r'^projects/$', Project_View.as_view(), name='Projects'),
     url(r'^images/(?P<pk>\d+)/$', views.image_edit, name='image_edit'),
     #url(r'^checkout/(?P<pk>\d+)/$', views.Checkout, name='Checkout'),
-    #url(r'^checkout/$', Checkout.as_view(), name='Checkout'),
-
     url(r'^checkout/$', Checkout.as_view(), name='Checkout'),
+
+    url(r'^checkout/add$', CheckoutCreateView.as_view(), name='Checkout'),
     #url(r'^packages/delete/(?P<pk>\d+)/$', views.package_delete, name='package_delete'),
 ]

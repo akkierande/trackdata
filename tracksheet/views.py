@@ -56,20 +56,21 @@ def userprofile(request,total_count):
         return "Error"
 
 #
-# class CheckoutCreateView(CreateView):
-#    model = Checkout
-#    form_class = CheckoutForm
-#    template_name = 'form.html'
-#
-#    def form_valid(self, form):
-#       self.object = form.save(commit=False)
-#       # any manual settings go here
-#       self.object.save()
-#       return HttpResponseRedirect(self.object.get_absolute_url())
-#
-#    @method_decorator(login_required)
-#    def dispatch(self, request, *args, **kwargs):
-#       return super(CheckoutCreateView, self).dispatch(request, *args, **kwargs)
+class CheckoutCreateView(CreateView):
+   model = Checkout
+   fields = ['checkout_at','image_objects','comment']
+   #form_class = CheckoutForm
+   template_name = 'tracksheet/checkout.html'
+
+   def form_valid(self, form):
+      self.object = form.save(commit=False)
+      # any manual settings go here
+      self.object.save()
+      return HttpResponseRedirect(self.object.get_absolute_url())
+
+   @method_decorator(login_required)
+   def dispatch(self, request, *args, **kwargs):
+      return super(CheckoutCreateView, self).dispatch(request, *args, **kwargs)
 #
 #
 # class CheckoutUpdateView(UpdateView):
@@ -111,7 +112,7 @@ class Image_View(FilterView, ExportMixin, SingleTableView):
 class Checkout(FilterView, ExportMixin, SingleTableView):
     table_class = CheckoutTable
     model = Checkout
-    template_name = 'tracksheet/table.html'
+    template_name = 'tracksheet/table1.html'
     filterset_class = CheckoutFilter
 
         #
