@@ -1,0 +1,70 @@
+{% extends 'tracksheet/base.html' %}
+{% block title %}Home{% endblock %}
+{% block header %}Dashboard {% endblock %}
+{% block header_tag %}Contains{% endblock %}
+{% block description %}Details{% endblock %}
+{% load static %}
+{% load render_table from django_tables2 %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% block body %}
+<div class="row">
+<div class="col-xs-12">
+    <div class="box" style="min-height:10px;">
+        <div class="box-header">
+            <h3 class="box-title">Responsive Hover Table</h3>
+
+            <div class="box-tools">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+                <tbody>
+                {% if icks %}
+                <tr>
+                    <th>ID</th>
+                    <th>User</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Objects</th>
+                    <th>Comment</th>
+                    <th>Total Time</th>
+                </tr>
+                {% for item in icks %}
+
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.checkout_by }}</td>
+                    <td>{{item.checkout_at}}</td>
+                    <td><span class="label label-success">{{item.image_status}}</span></td>
+                    <td>{{item.image_objects}}</td>
+                    <td>{{item.comment}}</td>
+                    <td>{{item.time_on_image}}</td>
+
+
+                    <td></td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr><h5>No search criteria found</h5></tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+
+        </div>
+    </div>
+    <!-- /.box -->
+</div>
+</div>
+{% endblock %}

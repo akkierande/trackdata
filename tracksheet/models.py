@@ -2,10 +2,11 @@
 from __future__ import unicode_literals
 from django.contrib.auth.models import User, Group
 from django.db import models
+from django.urls import reverse
 
 
 class Employee(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE,primary_key=True,related_name='employee')
     fullname = models.CharField(max_length=200, null=True)
     dob = models.DateField(null=True)
     department = models.CharField(max_length=100, null=True)
@@ -79,13 +80,22 @@ class Package(models.Model):
     def __str__(self):
         return self.package_name
 
-
 class Image(models.Model):
+    Status = (
+        ('Unlabelled', 'Unlabelled'),
+        ('Labelled', 'Labelled'),
+        ('Corrected', 'Corrected'),
+        ('Completed', 'Completed'),
+        ('Uploaded', 'Uploaded'),
+        ('Approved','Approved'),
+        ('ChangeNeeded', 'ChangeNeeded'),
+    )
     image_name = models.CharField(max_length=200)
     image_type = models.CharField(max_length=150)
     file_type = models.CharField(max_length=50)
     project = models.ForeignKey(Project, on_delete=models.CASCADE, null=True)
     package = models.ForeignKey(Package, on_delete=models.CASCADE, null=True)
+    status = models.CharField(max_length=15, choices=Status, default="Unlabelled")
     created_at = models.DateTimeField(auto_now=True)
     updated_at = models.DateTimeField(auto_now=True)
     created_by = models.CharField(max_length=20, null=False, default="admin")
@@ -97,21 +107,34 @@ class Image(models.Model):
 
 class Checkout(models.Model):
     Status = (
-        ('Unlabelled', 'Unlabelled'),
-        ('Paused', 'Paused'),
+        ('InProcess', 'InProcess'),
         ('Labelled', 'Labelled'),
         ('Corrected', 'Corrected'),
-        ('Completed', 'Completed'),
-        ('Uploaded', 'Uploaded'),
         ('ChangeNeeded', 'ChangeNeeded'),
     )
+
     image_id = models.ForeignKey(Image, on_delete=models.CASCADE, blank=True, null=True)
-    image_status = models.CharField(max_length=15, choices=Status, default="Unlabelled")
-    checkout_by = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
-    checkout_at = models.DateTimeField(blank=True, null=True)
     image_objects = models.IntegerField(blank=True, null=True)
+    image_status = models.CharField(max_length=15, choices=Status, blank=True)
+    checkin_at = models.DateTimeField(auto_created=True, blank=True, null=True)
+    checkout_at = models.DateTimeField(auto_created=True, blank=True, null=True)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now=True)
     comment = models.CharField(max_length=100, blank=True, null=True)
-    time_on_image = models.TimeField(blank=True, null=True)
+    total_time = models.CharField(max_length=10,blank=True, null=True)
 
     def __str__(self):
-        return self.image_status
+        return str(self.image_id)
+
+    def get_absolute_url(self):
+        return reverse('image_id', kwargs={'pk': self.pk})
+
+    def get_total_time(self):
+        total_time_on_image = 0
+        checkout = Checkout.checkout_at
+        checkin = Checkout.checkin_at
+        if checkout and checkin:
+            total_time_on_image = checkout - checkin
+        return total_time_on_image
+
+    get_latest_by = "checkout_at"

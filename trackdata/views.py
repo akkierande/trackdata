@@ -3,8 +3,15 @@ from django.contrib.auth import authenticate,login
 from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 from tracksheet.forms import RegistrationForm
+from django.http import HttpResponse, HttpResponseRedirect,request
+
+
 def index(request):
-    return render(request,'tracksheet/hometheme.html')
+
+    if '_auth_user_id' in request.session:
+        return redirect('/tracksheet/')
+    else:
+        return render(request,'tracksheet/hometheme.html')
 
 
 def register(request):

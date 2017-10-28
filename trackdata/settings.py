@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django_filters',
     'bootstrap3',
     'django_tables2',
+    'crispy_forms',
+    'import_export',
+    'datetimewidget',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'trackdata.urls'
@@ -124,8 +128,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/tracksheet/'
 LOGOUT_REDIRECT_URL = '/'
+#CRISPY_TEMPLATE_PACK = 'uni_form'
+
