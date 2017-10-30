@@ -11,8 +11,8 @@ from .models import *
 from .models import Image as ImageModel
 from .models import Checkout as CheckoutModel
 from .forms import *
-from .tables import ImageTable,CheckoutTable,CheckoutHistoryTable
-from .filters import ImageFilter,CheckoutFilter
+from .tables import ImageTable,CheckoutTable,CheckoutHistoryTable,PackageTable
+from .filters import ImageFilter,CheckoutFilter,PackageFilter
 from django_tables2 import RequestConfig, SingleTableView,SingleTableMixin
 from django_filters.views import FilterView
 from django_tables2.export.views import ExportMixin
@@ -130,6 +130,16 @@ class Image_Table(FilterView, ExportMixin, SingleTableView):
     template_name = 'tracksheet/image_table.html'
     filterset_class = ImageFilter
 
+class Package_Table(FilterView, ExportMixin, SingleTableView):
+    table_class = PackageTable
+    model = Package
+    paginate_by = 5
+    #RequestConfig(request, paginate={'per_page': 25}).configure(ImageTable)
+    template_name = 'tracksheet/index.html'
+    #filterset_class = PackageFilter
+
+
+
 
 
 class Checkout_Table(FilterView, ExportMixin, SingleTableView):
@@ -170,6 +180,8 @@ def addCheckout(request,pk=None):
     #qs = get_object_or_404(Image, pk=pk)
     #print (instance)
     form = CheckoutForm(request.POST or None,initial={'image_id': instance})
+    #print (form)
+
     checkout_of = CheckoutModel.objects.filter(image_id__pk=instance.id)
     table = CheckoutHistoryTable(checkout_of)
     RequestConfig(request).configure(table)
@@ -178,9 +190,11 @@ def addCheckout(request,pk=None):
     #instance = get_object_or_404(CheckoutModel,pk = pk)
     #form = JournalForm(initial={'tank': 123})
     if form.is_valid():
+        print (instance)
         instance = form.save(commit=False)
         instance.save()
-        #redirect('tracksheet/')
+        HttpResponseRedirect("/tracksheet/checkout")
+
     context = {
         # "title": qs.title,
         "checkout_of":checkout_of,

@@ -1,6 +1,7 @@
 import django_tables2 as tables
-from .models import Image,Checkout
+from .models import Image,Checkout,Package
 from django_tables2.utils import A
+from django.contrib.auth import models
 from django.utils.safestring import mark_safe
 from django.utils.html import escape
 from django.http import request
@@ -63,7 +64,9 @@ class CheckoutHistoryTable(tables.Table):
     #Image.image_name = tables.LinkColumn('image', args=[A('pk')])
     #name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')])
     #image_id = tables.LinkColumn('image', args=[A('pk')],text=lambda image: image.image_id, orderable=True, empty_values=())
-    Edit = tables.TemplateColumn('<button type="button" class="btn btn-warning btn-xs"><a href="/tracksheet/checkout/edit/{{record.id}}">Edit</a></button>')
+    #if get_user().has_perms()
+    Edit = tables.TemplateColumn('<a href="/tracksheet/checkout/edit/{{record.id}}"><button type="button" class="btn btn-warning btn-xs">Edit</button></a>')
+    #Delete = tables.TemplateColumn('<a href="/tracksheet/checkout/delete/{{record.id}}"><button type="button" class="btn btn-danger btn-xs">Delete</button></a>')
     image_status = tables.TemplateColumn('<span class="label label-success">{{record.image_status}}</span>',verbose_name="Status")
     class Meta:
         model = Checkout
@@ -74,3 +77,13 @@ class CheckoutHistoryTable(tables.Table):
         empty_text = "There are no Checkout matching the search criteria..."
         #sequence = ('Image_Name','image_type')
         #template_name = 'tracksheet/image_table.html'
+
+
+class PackageTable(tables.Table):
+    #image_name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')],orderable=True,verbose_name='Image Name')
+    class Meta:
+        model = Package
+        exclude = ['completed_date','uploaded_date','updated_at','updated_by']
+        empty_text = "There are no Packages matching the search criteria..."
+        sequence = ('id','package_name','total_image','package_date','project','package_status','created_at','created_by')
+        id = id

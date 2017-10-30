@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.contrib.auth.models import User, Group
 from django.db import models
 from django.urls import reverse
+import datetime
 
 
 class Employee(models.Model):
@@ -113,12 +114,12 @@ class Checkout(models.Model):
         ('ChangeNeeded', 'ChangeNeeded'),
     )
 
-    image_id = models.ForeignKey(Image, on_delete=models.CASCADE, blank=True, null=True)
-    image_objects = models.IntegerField(blank=True, null=True)
-    image_status = models.CharField(max_length=15, choices=Status, blank=True)
-    checkin_at = models.DateTimeField(auto_created=True, blank=True, null=True)
-    checkout_at = models.DateTimeField(auto_created=True, blank=True, null=True)
-    created_by = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    image_id = models.ForeignKey(Image, on_delete=models.CASCADE)
+    image_objects = models.PositiveIntegerField(blank=True, null=True)
+    image_status = models.CharField(max_length=15, choices=Status)
+    checkin_at = models.DateTimeField(auto_created=True,null=True)
+    checkout_at = models.DateTimeField(auto_created=True,null=True,blank=True)
+    created_by = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
     created_at = models.DateTimeField(auto_now=True)
     comment = models.CharField(max_length=100, blank=True, null=True)
     total_time = models.CharField(max_length=10,blank=True, null=True)

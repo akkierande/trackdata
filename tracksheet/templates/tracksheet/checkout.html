@@ -23,7 +23,7 @@
             <div class="col-md-6">
 
                 <div class="form-group pull-right">
-                    <form method="POST" role="form" action="/tracksheet/checkout/{{record.id}}">
+                    <form method="POST" role="form">
                         {% csrf_token %}
                         {{ form }}
                         <br>

@@ -35,24 +35,19 @@ class RegistrationForm(UserCreationForm):
         return user
 
 class CheckoutForm(forms.ModelForm):
-    #helper.field_class = 'form-group'
-
-    #checkout_at = forms.DateTimeField(widget=DateTimePicker(options={'format': '%Y-%m-%d %H:%M','language': 'en-us',}),)
-    #checkout_at = forms.DateTimeField(required=False,widget=DateTimePicker(options={"format": "YYYY-MM-DD HH:mm"}))
-    created = User.username
+    field_order = ['image_id','image_status','checkin_at','checkout_at']
     class Meta:
         model = Checkout
-
         exclude = {
             'created_by'
         }
         widgets = {
             # Use localization and bootstrap 3
-            'checkout_at': DateTimeWidget(attrs={'id': "checkout_at",'class':"form-control"}, usel10n=True, bootstrap_version=3),
             'checkin_at': DateTimeWidget(attrs={'id': "checkin_at",'class':"form-control"}, usel10n=True, bootstrap_version=3),
+            'checkout_at': DateTimeWidget(attrs={'id': "checkout_at", 'class': "form-control"}, usel10n=True,bootstrap_version=3),
             'created_by': User.username,
             'image_id': widgets.Select(attrs={'class': "form-control"}),
-            'image_objects':widgets.NumberInput(attrs={'class': "form-control"}),
+            'image_objects':widgets.NumberInput(attrs={'class': "form-control","min":"0"}),
             'image_status':widgets.Select(attrs={'class': "form-control"}),
             'comment':widgets.TextInput(attrs={'class': "form-control"}),
             'total_time':widgets.NumberInput(attrs={'class': "form-control"}),

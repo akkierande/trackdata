@@ -25,7 +25,7 @@ SECRET_KEY = '9d7p9=@5g9f)w2yf2hdriur*earzjxyi6plz7xx3(miwkrlamc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.11.228']
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'import_export',
     'datetimewidget',
+
 ]
 
 MIDDLEWARE = [
@@ -135,4 +136,5 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/tracksheet/'
 LOGOUT_REDIRECT_URL = '/'
 #CRISPY_TEMPLATE_PACK = 'uni_form'
+
 
