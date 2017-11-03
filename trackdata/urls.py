@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^accounts/login/', include('django.contrib.auth.urls'),{'next_page': '/login/'}),
+    url(r'^accounts/logout/',track_views.logout_view),
     url(r'^register/$', track_views.register, name='register'),
     url(r'^tracksheet/',include('tracksheet.urls')),
 

@@ -23,7 +23,16 @@ class RegistrationForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ("username","password1","password2","first_name", "last_name", "email",)
+        fields = ("username","password1","password2","first_name", "last_name","email")
+        # widgets = {
+        #     # Use localization and bootstrap 3
+        #     'username': widgets.TextInput,
+        #     'first_name': widgets.TextInput,
+        #     'last_name': widgets.TextInput,
+        #     'email': widgets.EmailInput,
+        #     'password1': widgets.PasswordInput,
+        #     'password2': widgets.PasswordInput,
+        # }
 
     def save(self, commit=True):
         user = super(RegistrationForm, self).save(commit=False)
@@ -35,23 +44,29 @@ class RegistrationForm(UserCreationForm):
         return user
 
 class CheckoutForm(forms.ModelForm):
-    field_order = ['image_id','image_status','checkin_at','checkout_at']
+    field_order = ['image_name','image_status','checkout_at','checkin_at']
+
     class Meta:
         model = Checkout
+        #created = User.username
         exclude = {
-            'created_by'
+            'created_by',
+            'total_time',
+        }
+        dateTimeOptions = {
+            'clearBtn': False,
+            'autoclose': True,
+            'showMeridian': True
         }
         widgets = {
             # Use localization and bootstrap 3
+            'checkout_at': widgets.TextInput(attrs={'class': "form-control",'readonly': True,}),
             'checkin_at': DateTimeWidget(attrs={'id': "checkin_at",'class':"form-control"}, usel10n=True, bootstrap_version=3),
-            'checkout_at': DateTimeWidget(attrs={'id': "checkout_at", 'class': "form-control"}, usel10n=True,bootstrap_version=3),
-            'created_by': User.username,
-            'image_id': widgets.Select(attrs={'class': "form-control"}),
+            'image_name': widgets.Select(attrs={'class': "form-control",'disabled': True}),
             'image_objects':widgets.NumberInput(attrs={'class': "form-control","min":"0"}),
             'image_status':widgets.Select(attrs={'class': "form-control"}),
             'comment':widgets.TextInput(attrs={'class': "form-control"}),
             'total_time':widgets.NumberInput(attrs={'class': "form-control"}),
-
         }
 
 

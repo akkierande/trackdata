@@ -36,22 +36,21 @@
     {% block content %}
     <div class="register-box-body">
     <p class="login-box-msg"><b>Register</b></p>
-    <form method="post">
+    <form method="POST">
         <div class="form-group has-feedback">
             {% csrf_token %}
+
             {% for field in form %}
             <div class="form-group has-feedback">
                 <p>{{ field.label_tag }}</p>
                 <p>{{ field }}</p>
-                {% if field.help_text %}
-                <small style="color: grey">{{ field.help_text }}</small>
-                {% endif %}
                 {% for error in field.errors %}
                     <p style="color: red">{{ error }}</p>
                 {% endfor %}
             </div>
             {% endfor %}
         </div>
+
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
@@ -79,7 +78,7 @@
   </div>
     {% endblock %}
   <!-- /.form-box -->
-</div>
+
 <!-- /.register-box -->
 <!-- jQuery 3 -->
 <script src="{% static 'tracksheet/bower_components/jquery/dist/jquery.min.js'%}"></script>

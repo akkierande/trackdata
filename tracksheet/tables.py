@@ -28,9 +28,9 @@ from django.http import request
 
 class ImageTable(tables.Table):
 
-    view = tables.TemplateColumn('<button type="button" class="btn btn-info btn-xs"><a href="/tracksheet/images/{{record.id}}"> Details </a></button>')
+    view = tables.TemplateColumn('<a href="/tracksheet/images/{{record.id}}"><button type="button" class="btn btn-info btn-xs"> Details </button></a>')
     #Editcheckout = tables.TemplateColumn('<button type="button" class="btn btn-warning btn-xs"><a href="/tracksheet/checkout/edit/{{record.id}}">Edit</a></button>')
-    checkout = tables.TemplateColumn('<button type="button" class="btn btn-warning btn-xs"><a href="/tracksheet/checkout/add/{{record.id}}">Checkout</a></button>')
+    checkout = tables.TemplateColumn('<a href="/tracksheet/checkout/add/{{record.id}}"><button type="button" class="btn btn-warning btn-xs">Checkout</button></a>')
 
     image_name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')],orderable=True,verbose_name='Image Name')
     class Meta:
@@ -45,18 +45,27 @@ class CheckoutTable(tables.Table):
 
     #Image.image_name = tables.LinkColumn('image', args=[A('pk')])
     #name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')])
-    image_id = tables.LinkColumn('image', args=[A('pk')],text=lambda image: image.image_id, orderable=True, empty_values=())
-    checkout = tables.TemplateColumn('<button type="button" class="btn btn-warning btn-xs"><a href="/tracksheet/checkout/add/{{record.id}}">Checkout</a></button>')
+    image_name = tables.LinkColumn('image', args=[A('pk')],text=lambda image:image.image_name, orderable=True, empty_values=())
+    #imagid = Image.pk
+    edit = tables.TemplateColumn('<a href="/tracksheet/checkout/edit/{{record.id}}"><button type="button" class="btn btn-warning btn-xs">Edit</button></a>')
 
     class Meta:
         model = Checkout
-        sequence = ('id','image_id','image_status','image_objects','checkout_at','checkin_at','comment')
+        sequence = ('id','image_name','image_status','image_objects','checkout_at','checkin_at','comment')
+        #qs = Image.objects.filter(CheckoutTable=Image.pk)
         #exclude = ('image_id')
-        #row_attrs = {'image_id': lambda record: record.pk}
+        row_attrs = {'image_name': lambda record:getattr(Image,'pk')}
         #edit_entries = tables.TemplateColumn('<a href="/tracksheet/image/{{image.image_name}}">Edit</a>')
         empty_text = "There are no Images matching the search criteria..."
         #sequence = ('Image_Name','image_type')
         #template_name = 'tracksheet/image_table.html'
+
+    # def __init__(self, *args, **kwargs):
+    #     if kwargs.pop("popup", False):
+    #         for column in self.base_columns.values():
+    #             if isinstance(column, tables.LinkColumn):
+    #                 column.args.insert(0, "popup")
+    #     super(Table, self).__init__(*args, **kwargs)
 
 
 class CheckoutHistoryTable(tables.Table):
@@ -65,14 +74,18 @@ class CheckoutHistoryTable(tables.Table):
     #name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')])
     #image_id = tables.LinkColumn('image', args=[A('pk')],text=lambda image: image.image_id, orderable=True, empty_values=())
     #if get_user().has_perms()
-    Edit = tables.TemplateColumn('<a href="/tracksheet/checkout/edit/{{record.id}}"><button type="button" class="btn btn-warning btn-xs">Edit</button></a>')
+
+    #image_name = tables.LinkColumn('image name',args=[A('')])
+    image_name = tables.LinkColumn('image', args=[A('get_image_id')], text=lambda image: image.image_name, orderable=True,empty_values=())
+    Edit = tables.TemplateColumn('<a href="/tracksheet/checkout/edit/{{ record.id }}"><button type="button" class="btn btn-warning btn-xs">Edit</button></a>')
     #Delete = tables.TemplateColumn('<a href="/tracksheet/checkout/delete/{{record.id}}"><button type="button" class="btn btn-danger btn-xs">Delete</button></a>')
     image_status = tables.TemplateColumn('<span class="label label-success">{{record.image_status}}</span>',verbose_name="Status")
     class Meta:
         model = Checkout
-        sequence = ('id','image_id','created_by','checkin_at','checkout_at','image_status','image_objects','comment')
+
+        sequence = ('id','image_name','created_by','checkout_at','checkin_at','image_status','image_objects','comment')
         #exclude = ('image_id')
-        #row_attrs = {'image_id': lambda record: record.pk}
+        #row_attrs = {'image_name': lambda record:}
         #edit_entries = tables.TemplateColumn('<a href="/tracksheet/image/{{image.image_name}}">Edit</a>')
         empty_text = "There are no Checkout matching the search criteria..."
         #sequence = ('Image_Name','image_type')

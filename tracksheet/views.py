@@ -6,6 +6,7 @@ from django.views.generic.detail import DetailView
 from django.http import HttpResponse, HttpResponseRedirect,request
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.urlresolvers import reverse
+from django.contrib import messages
 
 from .models import *
 from .models import Image as ImageModel
@@ -87,9 +88,13 @@ def userprofile(request):
 
 def imageView(request,pk =None):
     qs = get_object_or_404(Image, pk = pk )
-    js = CheckoutModel.objects.filter(image_id__pk=qs.id)
-    table = CheckoutHistoryTable(js)
-    RequestConfig(request).configure(table)
+    js = CheckoutModel.objects.filter(image_name__pk=qs.id)
+    #ms = get_object_or_404(ImageModel)
+    ms = str(qs.id)
+    print(qs)
+    print (ms)
+    table = CheckoutHistoryTable(js,{'ms':ms})
+    RequestConfig(request,paginate={'per_page': 10}).configure(table)
     return render(request, 'tracksheet/imgDetail.html',{'table': table,'qs': qs,'icks':js})
 
 # def CheckoutView(request, pk):
@@ -143,6 +148,7 @@ class Package_Table(FilterView, ExportMixin, SingleTableView):
 
 
 class Checkout_Table(FilterView, ExportMixin, SingleTableView):
+
     table_class = CheckoutTable
     model = Checkout
     paginate_by = 10
@@ -150,9 +156,13 @@ class Checkout_Table(FilterView, ExportMixin, SingleTableView):
     filterset_class = CheckoutFilter
 
 
+
+
+
 def checkoutimage(request,pk=None):
     qs = get_object_or_404(Image,pk = pk)
-    icks = CheckoutModel.objects.filter(image_id__pk = qs.id)
+    icks = CheckoutModel.objects.filter(image_name = qs.image_name)
+    print(icks)
     return render(request,'tracksheet/imagecheckout.html',{'icks':icks})
 
 
@@ -161,39 +171,68 @@ def checkoutimage(request,pk=None):
 
 def editCheckout(request,pk=None):
     instance = get_object_or_404(CheckoutModel,pk = pk)
+    id = Checkout.get_image_id(instance)
+
     #print(instance.checkout_at)
     form = CheckoutForm(request.POST or None, instance=instance)
     #print(instance)
     if form.is_valid():
         instance = form.save(commit=False)
+        checkin = form.cleaned_data['checkin_at']
+        checkout = form.cleaned_data['checkout_at']
+        print (checkin)
+        print (checkout)
+        if checkin is not None:
+            instance.total_time = checkin - checkout
+        instance.created_by = request.user
         instance.save()
+        messages.success(request, 'Checkout successful')
+        return redirect('/tracksheet/checkout/?sort=-created_at')
 
     context = {
         # "title": qs.title,
+        'id':id,
         "instance": instance,
         "form": form,
     }
     return render(request, 'tracksheet/checkout.html', context)
 
 def addCheckout(request,pk=None):
+    qs = CheckoutModel.objects.all()
+    #print (qs)
+    #print (CheckoutModel.image_name)
     instance = get_object_or_404(ImageModel, pk=pk)
+    checkout_instance = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     #qs = get_object_or_404(Image, pk=pk)
     #print (instance)
-    form = CheckoutForm(request.POST or None,initial={'image_id': instance})
+    form = CheckoutForm(request.POST or None,initial={'image_name': instance,'checkout_at':checkout_instance})
     #print (form)
 
-    checkout_of = CheckoutModel.objects.filter(image_id__pk=instance.id)
+    checkout_of = CheckoutModel.objects.filter(image_name__pk=instance.id)
     table = CheckoutHistoryTable(checkout_of)
-    RequestConfig(request).configure(table)
+    RequestConfig(request,paginate={'per_page': 10}).configure(table)
 
     #form = CheckoutForm(request.POST or None)
     #instance = get_object_or_404(CheckoutModel,pk = pk)
     #form = JournalForm(initial={'tank': 123})
     if form.is_valid():
+
         print (instance)
         instance = form.save(commit=False)
+        checkin = form.cleaned_data['checkin_at']
+        checkout = form.cleaned_data['checkout_at']
+        print (checkin)
+        print (checkout)
+        if checkin is not None:
+            instance.total_time = checkin-checkout
+        instance.created_by = request.user
+        #instance.total_time = checkin + checkout
+        print (instance.total_time)
         instance.save()
-        HttpResponseRedirect("/tracksheet/checkout")
+        messages.success(request, 'Checkout successful')
+        return redirect('add_checkout', pk=pk)
+        #return redirect('/tracksheet/checkout/', {'messages': messages})
+        #return redirect('/tracksheet/checkout/')
 
     context = {
         # "title": qs.title,

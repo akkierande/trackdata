@@ -20,7 +20,7 @@ urlpatterns = [
 
     url(r'^checkout/(?P<pk>\d+)/$', views.checkoutimage),
 
-    url(r'^checkout/add/(?P<pk>\d+)/$', views.addCheckout),
-    url(r'^checkout/edit/(?P<pk>\d+)/$', views.editCheckout),
+    url(r'^checkout/add/(?P<pk>\d+)/$', views.addCheckout, name='add_checkout'),
+    url(r'^checkout/edit/(?P<pk>\d+)/$', views.editCheckout, name='edit_checkout'),
     #url(r'^packages/delete/(?P<pk>\d+)/$', views.package_delete, name='package_delete'),
 ]

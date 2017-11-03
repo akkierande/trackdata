@@ -57,7 +57,7 @@ class CheckoutFilter(FilterSet):
     class Meta:
         model = Checkout
         fields = {
-            'image_id':['exact'],
+            'image_name':['exact'],
             'image_status':['exact'],
             'created_by': ['exact'],
         }
@@ -67,7 +67,7 @@ class CheckoutHistoryFilter(FilterSet):
     class Meta:
         model = Checkout
         fields = {
-            'image_id':['exact'],
+            'image_name':['exact'],
             'image_status':['exact'],
             'created_by': ['exact'],
         }

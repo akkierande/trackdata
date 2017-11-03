@@ -5,6 +5,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 from tracksheet.forms import RegistrationForm
 from django.http import HttpResponse, HttpResponseRedirect,request
+import re
 
 
 def index(request):
@@ -30,8 +31,12 @@ def register(request):
             return redirect('/accounts/login')
     else:
         form = RegistrationForm()
-        return render(request,'registration/register.html', {'form' : form})
+    return render(request,'registration/register.html', {'form' : form})
 
+def logout_view(request):
+    auth.logout(request)
+    # Redirect to a success page.
+    return HttpResponseRedirect("/")
 
 
 

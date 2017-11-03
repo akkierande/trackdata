@@ -8,6 +8,7 @@
 {% block body %}
 <script src="{% static 'tracksheet/bower_components/jquery.min.js'%}"></script>
 
+
 {{ form.media }}
 
 <div class="box box-warning">
@@ -23,6 +24,13 @@
     <div class="box-body">
         <div class="row">
             <div class="col-md-6">
+                {% if messages %}
+                <ul class="messages">
+                {% for message in messages %}
+                    {% if message.tags %}<li class="{{ message.tags }}">{% endif %}{{ message }}</li>
+                {% endfor %}
+                </ul>
+                {% endif %}
 
                 <div class="form-group">
                     <form method="POST" role="form">

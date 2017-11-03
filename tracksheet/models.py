@@ -113,29 +113,33 @@ class Checkout(models.Model):
         ('Corrected', 'Corrected'),
         ('ChangeNeeded', 'ChangeNeeded'),
     )
-
-    image_id = models.ForeignKey(Image, on_delete=models.CASCADE)
+    image_name = models.ForeignKey(Image,on_delete=models.CASCADE)
     image_objects = models.PositiveIntegerField(blank=True, null=True)
     image_status = models.CharField(max_length=15, choices=Status)
-    checkin_at = models.DateTimeField(auto_created=True,null=True)
-    checkout_at = models.DateTimeField(auto_created=True,null=True,blank=True)
+    checkout_at = models.DateTimeField(auto_created=True, null=True)
+    checkin_at = models.DateTimeField(auto_created=True,null=True,blank=True)
     created_by = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
     created_at = models.DateTimeField(auto_now=True)
     comment = models.CharField(max_length=100, blank=True, null=True)
     total_time = models.CharField(max_length=10,blank=True, null=True)
 
     def __str__(self):
-        return str(self.image_id)
+        return str(self.image_name)
+
+    def get_image_id(self):
+        qs = Image.objects.get(image_name=self.image_name)
+        image_id = qs.id
+        return image_id
 
     def get_absolute_url(self):
         return reverse('image_id', kwargs={'pk': self.pk})
 
-    def get_total_time(self):
-        total_time_on_image = 0
-        checkout = Checkout.checkout_at
-        checkin = Checkout.checkin_at
-        if checkout and checkin:
-            total_time_on_image = checkout - checkin
-        return total_time_on_image
+    # def get_total_time(self):
+    #     total_time_on_image = 0
+    #     checkout = Checkout.checkout_at
+    #     checkin = Checkout.checkin_at
+    #     if checkout and checkin:
+    #         total_time_on_image = checkout - checkin
+    #     return total_time_on_image
 
     get_latest_by = "checkout_at"

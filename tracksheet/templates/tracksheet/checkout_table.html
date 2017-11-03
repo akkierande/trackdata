@@ -1,8 +1,8 @@
 {% extends 'tracksheet/base.html' %}
 {% load render_table from django_tables2 %}
-{% block title %}Checkout Tables{% endblock %}
-{% block page %}Dashboard{% endblock %}
-{% block description %}Details{% endblock %}
+{% block title %}Checkouts{% endblock %}
+{% block header %}Checkout {% endblock %}
+{% block header_tag %}Details{% endblock %}
 {% load bootstrap3 %}
 {% bootstrap_css %}
 {% block body %}
@@ -10,7 +10,7 @@
         <div class="col-xs-12">
             <div class="box box-success">
                 <div class="box-header">
-                    <h3 class="box-title">Checkout Data Table</h3>
+                    <h3 class="box-title">Checkout Data</h3>
                     <form action="" method="get" class="form form-inline pull-right">
                         {% bootstrap_form filter.form %}
                         {% bootstrap_button "filter" button_type="submit" button_class="btn-primary" %}

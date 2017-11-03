@@ -31,7 +31,7 @@ from import_export.admin import ImportExportModelAdmin
 
 class ImageAdmin(ImportExportModelAdmin):
     if Checkout.image_status == "labelled":
-        labelled_image =  Checkout.image_id
+        labelled_image =  Checkout.image_name
     resource_class = ImageResource
     list_display = ('image_name', 'image_type','status','project', 'package','file_type','created_at')
     search_fields = ('image_name','package','status')
@@ -53,8 +53,8 @@ class EmployeeAdmin(admin.ModelAdmin):
 
 
 class CheckoutAdmin(ImportExportModelAdmin):
-    list_display = ('image_id','image_objects','image_status','checkin_at','checkout_at','created_by','created_at','comment','total_time')
-    search_fields = ('image_id', 'image_status')
+    list_display = ('image_name','image_objects','image_status','checkin_at','checkout_at','created_by','created_at','comment','total_time')
+    search_fields = ('image_name', 'image_status')
 
 
 

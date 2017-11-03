@@ -2,37 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bda3a743-056d-412f-be04-596f4bceb116" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0002_auto_20170914_0703.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0003_auto_20170914_1402.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0004_employee.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0005_auto_20170922_0453.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0006_auto_20170922_0511.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0007_auto_20170922_0539.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0008_auto_20170923_1238.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0009_auto_20171001_1729.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0010_auto_20171003_0744.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0011_auto_20171010_0418.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0012_auto_20171010_0722.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0013_auto_20171012_1317.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0014_auto_20171012_1443.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0015_auto_20171013_0824.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0016_auto_20171023_1250.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0017_auto_20171027_0933.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0018_auto_20171028_0644.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/migrations/0019_auto_20171028_0653.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trackdata/settings.py" afterPath="$PROJECT_DIR$/trackdata/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trackdata/urls.py" afterPath="$PROJECT_DIR$/trackdata/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trackdata/views.py" afterPath="$PROJECT_DIR$/trackdata/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/admin.py" afterPath="$PROJECT_DIR$/tracksheet/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/filters.py" afterPath="$PROJECT_DIR$/tracksheet/filters.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/forms.py" afterPath="$PROJECT_DIR$/tracksheet/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/models.py" afterPath="$PROJECT_DIR$/tracksheet/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/tables.py" afterPath="$PROJECT_DIR$/tracksheet/tables.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/registration/login.html" afterPath="$PROJECT_DIR$/tracksheet/templates/registration/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/registration/register.html" afterPath="$PROJECT_DIR$/tracksheet/templates/registration/register.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/profile.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/urls.py" afterPath="$PROJECT_DIR$/tracksheet/urls.py" />
@@ -49,71 +33,84 @@
     <favorites_list name="trackdata" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="tables.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/tables.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="79" column="79" lean-forward="false" selection-start-line="79" selection-start-column="79" selection-end-line="79" selection-end-column="79" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracksheet/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="201" column="21" lean-forward="false" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#81#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trackdata/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="291" column="20" lean-forward="true" selection-start-line="291" selection-start-column="20" selection-end-line="291" selection-end-column="20" />
-              <folding>
-                <element signature="n#li#0;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#1;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1509376296708" expanded="false" signature="27481:27487" ph="©" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="94" column="14" lean-forward="false" selection-start-line="94" selection-start-column="18" selection-end-line="303" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+              <caret line="173" column="39" lean-forward="false" selection-start-line="173" selection-start-column="39" selection-end-line="173" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addcheckout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="383">
+              <caret line="128" column="20" lean-forward="false" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filters.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/filters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="checkout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image_table.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -122,32 +119,10 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracksheet/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+            <state relative-caret-position="720">
+              <caret line="64" column="75" lean-forward="false" selection-start-line="64" selection-start-column="75" selection-end-line="64" selection-end-column="75" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,6 +159,9 @@
       <find>total</find>
       <find>block</find>
       <find>name</find>
+      <find>reve</find>
+      <find>logou</find>
+      <find>image_id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,8 +189,6 @@
         <option value="$USER_HOME$/django-tables2/example/app/views.py" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/hometheme.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/table.html" />
-        <option value="$PROJECT_DIR$/trackdata/urls.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/registration/register.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/image.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/admin/base_site.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/image_detail.html" />
@@ -220,7 +196,6 @@
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/calender.html" />
         <option value="$PROJECT_DIR$/tracksheet/templatetags/mytags.py" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/imagecheckout.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html" />
         <option value="$PROJECT_DIR$/ENV/Lib/datetimewidgets.py" />
         <option value="$PROJECT_DIR$/tracksheet/select_time_widget.py" />
         <option value="$PROJECT_DIR$/tracksheet/templatetags/splitdatetimewidget.py" />
@@ -228,32 +203,35 @@
         <option value="$PROJECT_DIR$/tracksheet/datetimewidgets.py" />
         <option value="$PROJECT_DIR$/tracksheet/widg.py" />
         <option value="$PROJECT_DIR$/tracksheet/widgets.py" />
-        <option value="$PROJECT_DIR$/tracksheet/filters.py" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/imgDetail.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html" />
         <option value="$PROJECT_DIR$/tracksheet/templatetags/tags.py" />
         <option value="$PROJECT_DIR$/tracksheet/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/trackdata/views.py" />
-        <option value="$PROJECT_DIR$/tracksheet/admin.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout.html" />
-        <option value="$PROJECT_DIR$/tracksheet/tables.py" />
-        <option value="$PROJECT_DIR$/tracksheet/views.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html" />
-        <option value="$PROJECT_DIR$/tracksheet/urls.py" />
-        <option value="$PROJECT_DIR$/trackdata/settings.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html" />
-        <option value="$PROJECT_DIR$/tracksheet/forms.py" />
-        <option value="$PROJECT_DIR$/tracksheet/models.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/profile.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/registration/register.html" />
+        <option value="$PROJECT_DIR$/trackdata/views.py" />
+        <option value="$PROJECT_DIR$/trackdata/urls.py" />
+        <option value="$PROJECT_DIR$/trackdata/settings.py" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html" />
+        <option value="$PROJECT_DIR$/tracksheet/filters.py" />
+        <option value="$PROJECT_DIR$/tracksheet/admin.py" />
+        <option value="$PROJECT_DIR$/tracksheet/urls.py" />
+        <option value="$PROJECT_DIR$/tracksheet/models.py" />
+        <option value="$PROJECT_DIR$/tracksheet/tables.py" />
+        <option value="$PROJECT_DIR$/tracksheet/forms.py" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout.html" />
+        <option value="$PROJECT_DIR$/tracksheet/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="51" />
-    <option name="y" value="-4" />
-    <option name="width" value="1869" />
-    <option name="height" value="1084" />
+    <option name="x" value="53" />
+    <option name="y" value="465" />
+    <option name="width" value="1867" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -301,13 +279,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trackdata" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trackdata" type="462c0819:PsiDirectoryNode" />
               <item name="trackdata" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -320,6 +301,20 @@
               <item name="trackdata" type="462c0819:PsiDirectoryNode" />
               <item name="tracksheet" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trackdata" type="462c0819:PsiDirectoryNode" />
+              <item name="tracksheet" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trackdata" type="462c0819:PsiDirectoryNode" />
+              <item name="tracksheet" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
@@ -336,12 +331,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../itool" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -460,16 +458,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="-4" width="1869" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2320351" sideWeight="0.49019608" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2484915" sideWeight="0.49019608" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2303665" sideWeight="0.5057597" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23979057" sideWeight="0.49643445" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2495886" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22827224" sideWeight="0.49424025" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22722512" sideWeight="0.49424025" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.4958859" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22161272" sideWeight="0.50980395" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -540,7 +537,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/table1.html" />
     <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/table.html" />
     <entry file="file://$PROJECT_DIR$/trackdata/static/import_export/action_formats.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -567,13 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trackdata/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="26" column="52" lean-forward="true" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -618,13 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/imagecheckout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" column="10" lean-forward="true" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/imgDetail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -639,165 +621,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="72" column="26" lean-forward="false" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trackdata/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="28" column="108" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="108" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="67" column="24" lean-forward="true" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/calender.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#63#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0008_auto_20170923_1238.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0007_auto_20170922_0539.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0006_auto_20170922_0511.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0005_auto_20170922_0453.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0004_employee.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0003_auto_20170914_1402.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0002_auto_20170914_0703.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/tables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="68" column="5" lean-forward="false" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="201" column="21" lean-forward="false" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0008_auto_20170923_1238.py" />
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0007_auto_20170922_0539.py" />
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0006_auto_20170922_0511.py" />
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0005_auto_20170922_0453.py" />
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0004_employee.py" />
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0003_auto_20170914_1402.py" />
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0002_auto_20170914_0703.py" />
     <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0002_auto_20171030_1034.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -821,67 +655,164 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trackdata/settings.py">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="396">
+          <caret line="22" column="123" lean-forward="false" selection-start-line="22" selection-start-column="123" selection-end-line="22" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="72" column="26" lean-forward="false" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/calender.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2322">
+          <caret line="129" column="10" lean-forward="false" selection-start-line="129" selection-start-column="10" selection-end-line="129" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="315" column="33" lean-forward="true" selection-start-line="315" selection-start-column="33" selection-end-line="315" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/registration/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trackdata/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trackdata/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trackdata/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="129" column="40" lean-forward="true" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/imagecheckout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="65" column="10" lean-forward="true" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tracksheet/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state relative-caret-position="383">
+          <caret line="128" column="20" lean-forward="false" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/tables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="79" column="79" lean-forward="false" selection-start-line="79" selection-start-column="79" selection-end-line="79" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tracksheet/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        <state relative-caret-position="720">
+          <caret line="64" column="75" lean-forward="false" selection-start-line="64" selection-start-column="75" selection-end-line="64" selection-end-column="75" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="576">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html">
+    <entry file="file://$PROJECT_DIR$/tracksheet/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="291" column="20" lean-forward="true" selection-start-line="291" selection-start-column="20" selection-end-line="291" selection-end-column="20" />
-          <folding>
-            <element signature="n#li#0;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#1;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1509376296708" expanded="false" signature="27481:27487" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="94" column="14" lean-forward="false" selection-start-line="94" selection-start-column="18" selection-end-line="303" selection-end-column="53" />
+        <state relative-caret-position="72">
+          <caret line="173" column="39" lean-forward="false" selection-start-line="173" selection-start-column="39" selection-end-line="173" selection-end-column="39" />
           <folding />
         </state>
       </provider>
