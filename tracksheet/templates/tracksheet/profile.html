@@ -8,6 +8,7 @@
 {% load bootstrap3 %}
 {% bootstrap_css %}
 {% load staticfiles %}
+{% load initialavatar %}
   <!-- Content Wrapper. Contains page content -->
 {% block body %}
     <!-- Content Header (Page header) -->
@@ -19,22 +20,24 @@
 
           <!-- Profile Image -->
           <div class="box box-primary">
-            <div class="box-body box-profile">
-              <img class="profile-user-img img-responsive img-circle" src="{% static 'tracksheet/dist/img/avatardd.jpeg' %}" alt="User profile picture">
+            <div class="box-body box-profile center">
+                <div style="position:pull-left; background:inherit">{% get_initial_avatar user 128 %}</div>
 
-              <h3 class="profile-username text-center">{{user.employee.fullname}}</h3>
+
+
+              <h3 class="profile-username text-center">{{user.first_name}}</h3>
 
               <p class="text-muted text-center">{{user.employee.designation}}</p>
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>Followers</b> <a class="pull-right">1,322</a>
+                  <b>Followers</b> <a class="pull-right">0,000</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Following</b> <a class="pull-right">543</a>
+                  <b>Following</b> <a class="pull-right">000</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Friends</b> <a class="pull-right">13,287</a>
+                  <b>Friends</b> <a class="pull-right">00,000</a>
                 </li>
               </ul>
 
@@ -89,7 +92,7 @@
             <ul class="nav nav-tabs">
               <li class="active"><a href="#activity" data-toggle="tab">Activity</a></li>
               <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
-              <li><a href="#settings" data-toggle="tab">Settings</a></li>
+              <li><a href="#settings" data-toggle="tab">Edit Profile</a></li>
             </ul>
             <div class="tab-content">
               <!--<div class="active tab-pane" id="activity">-->
@@ -306,31 +309,38 @@
               <div class="tab-pane" id="settings">
                 <form class="form-horizontal">
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+                    <label for="inputName" class="col-sm-2 control-label">Full Name</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="Name">
+                      <input type="email" class="form-control" id="inputName" placeholder="Full Name">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                    <label for="inputEmail" class="col-sm-2 control-label">DOB</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                      <input type="Date" class="form-control" id="inputEmail" placeholder="DOB">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+                    <label for="inputName" class="col-sm-2 control-label">Department</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName" placeholder="Name">
+                      <input type="text" class="form-control" id="inputName" placeholder="Department">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+                    <label for="inputExperience" class="col-sm-2 control-label">Previous Designation</label>
 
                     <div class="col-sm-10">
-                      <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                      <input type="text" class="form-control" id="inputExperience" placeholder="Previous Designation"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputExperience" class="col-sm-2 control-label">designation</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputExperience" placeholder="Designation"></textarea>
                     </div>
                   </div>
                   <div class="form-group">
@@ -338,6 +348,34 @@
 
                     <div class="col-sm-10">
                       <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputProjects" class="col-sm-2 control-label">Project</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputProjects" placeholder="Project">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputSkills" class="col-sm-2 control-label">Education</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="" placeholder="Education">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputSkills" class="col-sm-2 control-label">Location</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="" placeholder="Location">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputSkills" class="col-sm-2 control-label">Experience</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="" placeholder="Experience">
                     </div>
                   </div>
                   <div class="form-group">

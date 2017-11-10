@@ -1,7 +1,8 @@
 #myproject/myproject/templatetags/tags.py
 
 from django import template
-from tracksheet.models import User,Image,Employee
+from tracksheet.models import User,Image,Employee,Package
+from django.contrib.auth.models import Group
 
 register = template.Library()
 
@@ -26,3 +27,16 @@ def get_user(request):
     if User.is_authenticated:
         login_user = User.objects.all()
         return login_user
+
+@register.simple_tag
+def is_labeller(user):
+    print("true")
+    return user.groups.filter(name__in=['Labeller']).exists()
+    #print("False")
+    #return group in user.groups.all()
+
+@register.simple_tag
+def get_total_packages(request):
+    total_packages = Package.objects.count()
+    return total_packages
+

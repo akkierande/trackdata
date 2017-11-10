@@ -1,0 +1,34 @@
+{% extends 'tracksheet/base.html' %}
+{% load render_table from django_tables2 %}
+{% block title %}Projects{% endblock %}
+{% block header %}Project {% endblock %}
+{% block header_tag %}Details{% endblock %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% load tags %}
+{% block body %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box box-success">
+            {% if perms.project.view_projects %}
+            <div class="box-header">
+                <h3 class="box-title">Project Data</h3>
+                <form action="" method="get" class="form form-inline pull-right">
+                    {% bootstrap_form filter.form %}
+                    {% bootstrap_button "filter" button_type="submit" button_class="btn-primary" %}
+                </form>
+            </div>
+            <div class="col-sm-12">
+                {% render_table table %}
+            </div>
+            <div class="box-footer clearfix">
+            {% else %}
+            <div class="alert alert-warning" role="alert">
+            You are Not Authorised To View This Details
+            </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

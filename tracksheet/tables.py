@@ -1,5 +1,6 @@
 import django_tables2 as tables
-from .models import Image,Checkout,Package
+from django_tables2_column_shifter.tables import ColumnShiftTable
+from .models import Image,Checkout,Package,Project
 from django_tables2.utils import A
 from django.contrib.auth import models
 from django.utils.safestring import mark_safe
@@ -26,7 +27,7 @@ from django.http import request
 #
 #         #template_name = 'tracksheet/image_table.html'  /tracksheet/images/{{record.id}}  <a data-toggle="modal" href="#imageModal">Checkout</a>
 
-class ImageTable(tables.Table):
+class ImageTable(ColumnShiftTable):
 
     view = tables.TemplateColumn('<a href="/tracksheet/images/{{record.id}}"><button type="button" class="btn btn-info btn-xs"> Details </button></a>')
     #Editcheckout = tables.TemplateColumn('<button type="button" class="btn btn-warning btn-xs"><a href="/tracksheet/checkout/edit/{{record.id}}">Edit</a></button>')
@@ -35,9 +36,9 @@ class ImageTable(tables.Table):
     image_name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')],orderable=True,verbose_name='Image Name')
     class Meta:
         model = Image
-        exclude = ['updated_at','updated_by','file_type','status','image_type']
+        exclude = ['updated_at','updated_by','file_type','image_type']
         empty_text = "There are no Images matching the search criteria..."
-        sequence = ('id','project','package','image_name','created_at','created_by','view',)
+        sequence = ('id','project','package','image_name','status','label_time','correction_time','loop_on_image','created_at','created_by')
         id = id
 
 
@@ -45,7 +46,7 @@ class CheckoutTable(tables.Table):
 
     #Image.image_name = tables.LinkColumn('image', args=[A('pk')])
     #name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')])
-    image_name = tables.LinkColumn('image', args=[A('pk')],text=lambda image:image.image_name, orderable=True, empty_values=())
+    image_name = tables.LinkColumn('image', args=[A('get_image_id')],text=lambda image:image.image_name, orderable=True, empty_values=())
     #imagid = Image.pk
     edit = tables.TemplateColumn('<a href="/tracksheet/checkout/edit/{{record.id}}"><button type="button" class="btn btn-warning btn-xs">Edit</button></a>')
 
@@ -92,11 +93,21 @@ class CheckoutHistoryTable(tables.Table):
         #template_name = 'tracksheet/image_table.html'
 
 
-class PackageTable(tables.Table):
+class PackageTable(ColumnShiftTable):
     #image_name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')],orderable=True,verbose_name='Image Name')
     class Meta:
         model = Package
-        exclude = ['completed_date','uploaded_date','updated_at','updated_by']
+        exclude = ['completed_date','updated_at','updated_by']
         empty_text = "There are no Packages matching the search criteria..."
-        sequence = ('id','package_name','total_image','package_date','project','package_status','created_at','created_by')
-        id = id
+        sequence = ('id','package_name','total_image','package_date','project','package_status','uploaded_date','created_at','created_by')
+        #id = id
+
+
+class ProjectTable(ColumnShiftTable):
+    #total_packages = tables.LinkColumn('package', text=lambda package: package.total_packages, args=[A('get_total_packages')],orderable=True,verbose_name='Image Name')
+    class Meta:
+        model = Project
+        exclude = ['completed_date','uploaded_date','updated_at','updated_by']
+        empty_text = "There are no Projects matching the search criteria..."
+        sequence = ('id','project_name','customer','project_type','start_date','end_date','resources','total_packages','current_uploaded','project_status')
+        #id = id

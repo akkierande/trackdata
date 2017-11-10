@@ -41,10 +41,11 @@ INSTALLED_APPS = [
     'django_filters',
     'bootstrap3',
     'django_tables2',
+    'django_tables2_column_shifter',
     'crispy_forms',
     'import_export',
     'datetimewidget',
-
+    'initial_avatars',
 ]
 
 MIDDLEWARE = [
@@ -134,7 +135,14 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/tracksheet/'
-#LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 #CRISPY_TEMPLATE_PACK = 'uni_form'
 
-
+MEDIA_ROOT = os.path.join(BASE_DIR,'MEDIA')
+MEDIA_URL='/media/'
+# # AVATAR_STORAGE_BACKEND = 'trackdata.custom_storages.AvatarStorage'
+#AVATAR_STORAGE_FOLDER = BASE_DIR + '/tracksheet/avatars'
+AVATAR_DEFAULT_SHAPE = 'square'
+AVATAR_HIGH_RESOLUTION = True
+AVATAR_COLORS = ((0,0, 0), (0, 0, 0),)
+GRAVATAR_DEFAULT_SIZE = 200

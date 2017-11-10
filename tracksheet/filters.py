@@ -1,5 +1,6 @@
 import django_filters
 from django_filters import FilterSet
+import django_filters as filters
 
 from .models import Package,Image,Project,Checkout
 
@@ -17,6 +18,7 @@ class PackageFilter(FilterSet):
 
 
 class ImageFilter(FilterSet):
+    image_name = filters.CharFilter(label='Image -',lookup_expr='icontains')
     class Meta:
         model = Image
         #lookup_expr = ['exact', 'iexact']
@@ -29,7 +31,6 @@ class ImageFilter(FilterSet):
         fields = {
             'project':['exact'],
             'package': ['exact'],
-            'image_name':['contains'],
 
         }
         # exclude = {
@@ -41,14 +42,28 @@ class ImageFilter(FilterSet):
         # }
 
 
+
 class ProjectFilter(FilterSet):
 
-    empty_text = "There are no package matching the search criteria..."
+    empty_text = "There are no project matching the search criteria..."
 
     class Meta:
         model = Project
         fields = {
-            'project_name': ['exact', 'contains'],
+            'project_name': ['contains'],
+            'project_status':['exact'],
+            # 'tz': ['exact'],
+        }
+
+class PackageFilter(FilterSet):
+
+    empty_text = "There are no package matching the search criteria..."
+
+    class Meta:
+        model = Package
+        fields = {
+            'package_name': ['contains'],
+            'project': ['exact'],
             # 'tz': ['exact'],
         }
 

@@ -42,7 +42,7 @@ class ImageAdmin(ImportExportModelAdmin):
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('project_name','customer','project_type','start_date','end_date','resources','total_image','current_uploaded','challenges','project_status','created_at')
+    list_display = ('project_name','customer','project_type','start_date','end_date','resources','total_packages','current_uploaded','challenges','project_status','created_at')
 
 class PackageAdmin(admin.ModelAdmin):
     list_display = ('package_name', 'total_image', 'project', 'package_status','package_date','completed_date','uploaded_date','created_at')

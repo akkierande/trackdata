@@ -54,18 +54,17 @@ class CheckoutForm(forms.ModelForm):
             'total_time',
         }
         dateTimeOptions = {
-            'clearBtn': False,
             'autoclose': True,
-            'showMeridian': True
         }
+
         widgets = {
             # Use localization and bootstrap 3
             'checkout_at': widgets.TextInput(attrs={'class': "form-control",'readonly': True,}),
-            'checkin_at': DateTimeWidget(attrs={'id': "checkin_at",'class':"form-control"}, usel10n=True, bootstrap_version=3),
-            'image_name': widgets.Select(attrs={'class': "form-control",'disabled': True}),
-            'image_objects':widgets.NumberInput(attrs={'class': "form-control","min":"0"}),
+            'checkin_at': DateTimeWidget(options=dateTimeOptions,attrs={'id': "checkin_at",'class':"form-control",'placeholder':"Image Stop Time"}, usel10n=True, bootstrap_version=3),
+            'image_name': widgets.Select(attrs={'class': "form-control disabled"}),
+            'image_objects':widgets.NumberInput(attrs={'class': "form-control","min":"0",'placeholder':"Total Objects In Image"}),
             'image_status':widgets.Select(attrs={'class': "form-control"}),
-            'comment':widgets.TextInput(attrs={'class': "form-control"}),
+            'comment':widgets.TextInput(attrs={'class': "form-control",'placeholder':"Put Your Comment Here"}),
             'total_time':widgets.NumberInput(attrs={'class': "form-control"}),
         }
 
@@ -73,7 +72,11 @@ class CheckoutForm(forms.ModelForm):
     # def created(model):
     #     created_by =User.USERNAME_FIELD
     #     return created_by
-
+    #     widgets = {
+    #         'start_date': forms.DateInput(attrs={
+    #             'class': 'datepicker', 'data-min': YOUR_MIN_DATE,
+    #             'data-max': YOUR_MAX_DATE}),
+    #     }
 
 
 

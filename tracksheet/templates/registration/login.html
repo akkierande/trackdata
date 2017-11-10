@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +52,7 @@
         <form method="post">
             {% csrf_token %}
             <div class="form-group has-feedback">
-                {{ form.as_p }}
+                {{ form | crispy }}
             </div>
             <div class="row">
                 <div class="col-xs-8">

@@ -1,6 +1,7 @@
 {% load staticfiles %}
 {% load i18n static %}
 {% load tags %}
+{% load initialavatar %}
 <!-- Bootstrap 3.3.7 -->
 <!DOCTYPE html>
 <html>
@@ -34,9 +35,11 @@
     <link rel="stylesheet" href="{% static 'tracksheet/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'%}">
 
     <link rel="stylesheet" href="{% static 'django_tables2/bootstrap.css' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -275,15 +278,14 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="{% static 'tracksheet/dist/img/avatardd.jpeg' %}" class="user-image"
-                                 alt="User Image">
+
+
                             <span class="hidden-xs">{{user.username}}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="{% static 'tracksheet/dist/img/avatardd.jpeg' %}" class="img-circle"
-                                     alt="User Image">
+                                {% get_initial_avatar user %}
 
                                 <p>
                                     {% if user.employee.fullname %}{{user.employee.fullname}}{% else %}<a href="/tracksheet/userprofile">Add Fullname</a>{% endif %} - {% if user.employee.designation %}{{user.employee.designation}}{% else %}<a href="/tracksheet/userprofile">Add Designation</a>{% endif %}
@@ -327,7 +329,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="{% static 'tracksheet/dist/img/avatardd.jpeg' %}" class="img-circle" alt="User Image">
+                    {% get_initial_avatar user %}
                 </div>
                 <div class="pull-left info">
                     <p>{{ user.username }}</p>
@@ -373,13 +375,16 @@
                         <i class="fa fa-files-o"></i>
                         <span>Data</span>
                         <span class="pull-right-container">
-                        <span class="label label-primary pull-right">3</span>
+                        <span class="label label-primary pull-right">4</span>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="/tracksheet/images/"><i class="fa fa-circle-o"></i>Image Table</a></li>
                         <li><a href="/tracksheet/checkout/"><i class="fa fa-circle-o"></i>Checkout Table</a></li>
+
+                        <li><a href="/tracksheet/packages/"><i class="fa fa-circle-o"></i>Package Table</a></li>
                         <li><a href="/tracksheet/projects/"><i class="fa fa-circle-o"></i>Project Table</a></li>
+
                     </ul>
                 </li>
 
@@ -494,6 +499,9 @@
             <!-- include "tracksheet/calender.html" -->
 
 
+
+            {% get_initial_avatar user 50 %}
+
         </section>
     </div>
 
@@ -552,10 +560,13 @@
 <script src="{% static 'tracksheet/dist/js/adminlte.min.js'%}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{% static 'tracksheet/dist/js/pages/dashboard.js'%}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{% static 'tracksheet/dist/js/demo.js'%}"></script>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
+<script
+    type="text/javascript"
+    src="{% static 'django_tables2_column_shifter/js/django_tables2_column_shifter.min.js' %}">
+</script>
 </body>
 </html>
