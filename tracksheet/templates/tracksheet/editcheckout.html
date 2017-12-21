@@ -6,13 +6,35 @@
 {% load crispy_forms_tags %}
 {% block body %}
 <script src="{% static 'tracksheet/bower_components/jquery.min.js'%}"></script>
+<script>
+$(document).ready(function(){
+        $("#checkin_at").after("<span class='input-group-addon' id='get_time'><span class='glyphicon glyphicon-time'></span></span>");
+
+        Number.prototype.padLeft = function(base,chr){
+           var  len = (String(base || 10).length - String(this).length)+1;
+           return len > 0? new Array(len).join(chr || '0')+this : this;
+        }
+
+        $('#get_time').click(function(){
+            var d = new Date,
+                dformat = [ d.getFullYear(),
+                                        (d.getMonth()+1).padLeft(),
+                            d.getDate().padLeft()].join('-')+
+                            ' ' +
+                          [ d.getHours().padLeft(),
+                            d.getMinutes().padLeft(),
+                            d.getSeconds().padLeft()].join(':');
+             $('#checkin_at').val(dformat);
+        });
+
+});
+</script>
 
 {{ form.media }}
 
 <div class="box box-warning">
     <div class="box-header with-border">
-        <h3 class="box-title">Checkout</h3>
-
+        <h2 class="box-title">Edit Checkout of <b>{{instance}}</b></h2>
         <div class="box-tools pull-right">
             <a class="btn btn-warning btn-sm" href="/tracksheet/checkout/add/{{id}}" role="button"> Back </a>
         </div>
@@ -20,7 +42,7 @@
     <!-- /.box-header -->
     <div class="box-body">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 {% if messages %}
                 <div class="messages">
                 {% for message in messages %}

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'import_export',
     'datetimewidget',
     'initial_avatars',
+    'bulk_admin',
 ]
 
 MIDDLEWARE = [
@@ -142,7 +143,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'MEDIA')
 MEDIA_URL='/media/'
 # # AVATAR_STORAGE_BACKEND = 'trackdata.custom_storages.AvatarStorage'
 #AVATAR_STORAGE_FOLDER = BASE_DIR + '/tracksheet/avatars'
-AVATAR_DEFAULT_SHAPE = 'square'
+#AVATAR_DEFAULT_SHAPE = 'square'
 AVATAR_HIGH_RESOLUTION = True
 AVATAR_COLORS = ((0,0, 0), (0, 0, 0),)
 GRAVATAR_DEFAULT_SIZE = 200

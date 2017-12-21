@@ -11,10 +11,13 @@
         <div class="box box-success">
             <div class="box-header">
                 <h3 class="box-title">Image Data</h3>
-                <form action="" method="get" class="form form-inline pull-right">
-                    {% bootstrap_form filter.form %}
-                    {% bootstrap_button "filter" button_type="submit" button_class="btn-primary" %}
-                </form>
+
+            </div>
+            <div class="col-sm-12 box-body clearfix">
+            <form action="" method="get" class="form form-inline">
+                    {% bootstrap_form filter.form size='small' %}
+                    {% bootstrap_button "filter" button_type="submit" button_class="btn-sm btn-primary" %}
+            </form>
             </div>
             <div class="col-sm-12">
 

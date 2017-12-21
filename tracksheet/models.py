@@ -1,26 +1,27 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User, Group ,AbstractUser
 from django.db import models
 from django.urls import reverse
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 import datetime
+from datetime import datetime,time
 
 
 class Employee(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE,primary_key=True,related_name='employee')
     fullname = models.CharField(max_length=200, null=True)
-    dob = models.DateField(null=True)
-    department = models.CharField(max_length=100, null=True)
-    previous_designation = models.CharField(max_length=100, null=True)
+    dob = models.DateField(null=True,blank=True)
+    department = models.CharField(max_length=100, null=True,blank=True)
+    previous_designation = models.CharField(max_length=100, null=True , blank=True)
     designation = models.ForeignKey(Group, on_delete=models.CASCADE, default='1')
-    shift = models.CharField(max_length=100, null=True)
-    emp_id = models.IntegerField(null=True, default="00000")
-    project = models.CharField(max_length=100, null=True)
-    education = models.CharField(max_length=100, null=True)
-    location = models.CharField(max_length=50, null=True)
-    experience = models.CharField(max_length=100, null=True)
+    shift = models.CharField(max_length=100, null=True , blank=True)
+    emp_id = models.IntegerField(blank=True,unique=True,null=True)
+    project = models.CharField(max_length=100, null=True , blank=True)
+    education = models.CharField(max_length=100, null=True , blank=True)
+    location = models.CharField(max_length=50, null=True , blank=True)
+    experience = models.CharField(max_length=100, null=True,blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     created_by = models.CharField(max_length=20, null=False, default="admin")
@@ -30,7 +31,6 @@ class Employee(models.Model):
         permissions = (
             ("view_employees", "Can view employees"),
         )
-
 
     def __str__(self):
         # return self.fullname
@@ -106,6 +106,96 @@ class Package(models.Model):
     def __str__(self):
         return self.package_name
 
+class Folder(models.Model):
+    Status = (
+        ('Unlabelled', 'Unlabelled'),
+        ('InProcess', 'InProcess'),
+        ('Completed', 'Completed'),
+        ('Uploaded', 'Uploaded'),
+    )
+    total_image = models.IntegerField(null=True, default="00000")
+    folder_name = models.CharField(max_length=200)
+    folder_date = models.DateField()
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, null=True)
+    package = models.ForeignKey(Package, on_delete=models.CASCADE, null=True)
+    folder_status = models.CharField(max_length=15, choices=Status, default="Unlabelled")
+    completed_date = models.DateField(auto_created=True, blank=True, null=True)
+    uploaded_date = models.DateField(auto_created=True, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    created_by = models.CharField(max_length=20, null=False, default="admin")
+    updated_by = models.CharField(max_length=20, null=False, default="admin")
+
+    class Meta:
+        permissions = (
+            ("view_folder", "Can view folder"),
+        )
+
+    def __str__(self):
+        return self.folder_name
+
+class Sequence(models.Model):
+    Status = (
+        ('Unlabelled', 'Unlabelled'),
+        ('InProcess', 'InProcess'),
+        ('Completed', 'Completed'),
+        ('Uploaded', 'Uploaded'),
+    )
+    total_image = models.IntegerField(null=True, default="00000")
+    sequence_name = models.CharField(max_length=200)
+    sequence_date = models.DateField()
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, null=True)
+    package = models.ForeignKey(Package, on_delete=models.CASCADE, null=True)
+    folder = models.ForeignKey(Folder, on_delete=models.CASCADE, null=True)
+    sequence_status = models.CharField(max_length=15, choices=Status, default="Unlabelled")
+    completed_date = models.DateField(auto_created=True, blank=True, null=True)
+    uploaded_date = models.DateField(auto_created=True, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    created_by = models.CharField(max_length=20, null=False, default="admin")
+    updated_by = models.CharField(max_length=20, null=False, default="admin")
+
+    class Meta:
+        permissions = (
+            ("view_sequence", "Can view sequence"),
+        )
+
+    def __str__(self):
+        return self.sequence_name
+
+
+
+class Set(models.Model):
+    Status = (
+        ('Unlabelled', 'Unlabelled'),
+        ('InProcess', 'InProcess'),
+        ('Completed', 'Completed'),
+        ('Uploaded', 'Uploaded'),
+    )
+    total_image = models.IntegerField(null=True, default="00000")
+    set_name = models.CharField(max_length=200)
+    set_date = models.DateField()
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, null=True)
+    package = models.ForeignKey(Package, on_delete=models.CASCADE, null=True)
+    sequence = models.ForeignKey(Sequence, on_delete=models.CASCADE, null=True)
+    folder = models.ForeignKey(Folder, on_delete=models.CASCADE, null=True)
+    set_status = models.CharField(max_length=15, choices=Status, default="Unlabelled")
+    completed_date = models.DateField(auto_created=True, blank=True, null=True)
+    uploaded_date = models.DateField(auto_created=True, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    created_by = models.CharField(max_length=20, null=False, default="admin")
+    updated_by = models.CharField(max_length=20, null=False, default="admin")
+
+    class Meta:
+        permissions = (
+            ("view_set", "Can view set"),
+        )
+
+    def __str__(self):
+        return self.set_name
+
+
 class Image(models.Model):
     Status = (
         ('Unlabelled', 'Unlabelled'),
@@ -117,12 +207,25 @@ class Image(models.Model):
         ('Approved', 'Approved'),
         ('Uploaded', 'Uploaded'),
     )
+    Image_type = (
+        ('hard', 'hard'),
+        ('easy', 'easy'),
+        ('medium', 'medium'),
+    )
+    File_type = (
+        ('png', 'png'),
+        ('pgm', 'pgm'),
+        ('ppm', 'ppm'),
+    )
     image_name = models.CharField(max_length=200)
-    image_type = models.CharField(max_length=150)
-    file_type = models.CharField(max_length=50)
+    image_type = models.CharField(max_length=150,choices=Image_type, default="hard",null=True)
+    file_type = models.CharField(max_length=50,choices=File_type, default="png")
     project = models.ForeignKey(Project, on_delete=models.CASCADE, null=True)
     package = models.ForeignKey(Package, on_delete=models.CASCADE, null=True)
-    assign_to = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
+    sequence = models.ForeignKey(Sequence, on_delete=models.CASCADE, null=True)
+    folder = models.ForeignKey(Folder, on_delete=models.CASCADE, null=True)
+    set = models.ForeignKey(Set, on_delete=models.CASCADE, null=True)
+    assign_to = models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
     status = models.CharField(max_length=15, choices=Status, default="Unlabelled")
     label_time = models.CharField(max_length=10, blank=True, null=True)
     correction_time = models.CharField(max_length=10,blank=True, null=True)
@@ -133,8 +236,10 @@ class Image(models.Model):
     updated_by = models.CharField(max_length=20, null=False, default="admin")
 
     def __str__(self):
-        return self.image_name
+        return str(self.pk)
 
+    # def get_image_name(self):
+    #     return self.image_name
 
 class Checkout(models.Model):
     Status = (
@@ -145,7 +250,7 @@ class Checkout(models.Model):
         ('InQuality', 'InQuality'),
         ('Approved', 'Approved'),
     )
-    image_name = models.ForeignKey(Image,on_delete=models.CASCADE)
+    image = models.ForeignKey(Image,on_delete=models.CASCADE)
     image_objects = models.PositiveIntegerField(blank=True, null=True)
     image_status = models.CharField(max_length=15, choices=Status)
     checkout_at = models.DateTimeField(auto_created=True, null=True)
@@ -153,25 +258,17 @@ class Checkout(models.Model):
     created_by = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     comment = models.CharField(max_length=100, blank=True, null=True)
-    total_time = models.CharField(max_length=10,blank=True, null=True)
+    total_time = models.DurationField(blank=True, null=True)
 
     def __str__(self):
-        return str(self.image_name)
+        return str(self.pk)
 
-    def get_image_id(self):
-        qs = Image.objects.get(image_name=self.image_name)
-        image_id = qs.id
-        return image_id
+    def get_image_name(self,pk = None):
+        qs = Image.objects.get(id = self.image.id)
+        image_name = qs.image_name
+        return image_name
 
     def get_absolute_url(self):
         return reverse('image_id', kwargs={'pk': self.pk})
-
-    # def get_total_time(self):
-    #     total_time_on_image = 0
-    #     checkout = Checkout.checkout_at
-    #     checkin = Checkout.checkin_at
-    #     if checkout and checkin:
-    #         total_time_on_image = checkout - checkin
-    #     return total_time_on_image
 
     get_latest_by = "checkout_at"

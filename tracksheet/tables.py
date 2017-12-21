@@ -36,17 +36,20 @@ class ImageTable(ColumnShiftTable):
     image_name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')],orderable=True,verbose_name='Image Name')
     class Meta:
         model = Image
-        exclude = ['updated_at','updated_by','file_type','image_type']
+        exclude = ['updated_at','updated_by','created_at','created_by','file_type','image_type']
         empty_text = "There are no Images matching the search criteria..."
-        sequence = ('id','project','package','image_name','status','label_time','correction_time','loop_on_image','created_at','created_by')
+        sequence = ('id','project','package','folder','sequence','set','image_name','status','label_time','correction_time','loop_on_image')
         id = id
 
 
 class CheckoutTable(tables.Table):
+    #image_name = tables.Column(accessor='image_id',)
 
     #Image.image_name = tables.LinkColumn('image', args=[A('pk')])
     #name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')])
-    image_name = tables.LinkColumn('image', args=[A('get_image_id')],text=lambda image:image.image_name, orderable=True, empty_values=())
+    #image_name = tables.LinkColumn('image', args=[A('image_id')], text= lambda Image: Image.image_id, orderable=True, empty_values=())
+    image_name = tables.LinkColumn('image', args=[A('image.id')],text= lambda image: image.image.image_name,orderable=True,empty_values=())
+    #print (image.image_name)
     #imagid = Image.pk
     edit = tables.TemplateColumn('<a href="/tracksheet/checkout/edit/{{record.id}}"><button type="button" class="btn btn-warning btn-xs">Edit</button></a>')
 
@@ -54,8 +57,8 @@ class CheckoutTable(tables.Table):
         model = Checkout
         sequence = ('id','image_name','image_status','image_objects','checkout_at','checkin_at','comment')
         #qs = Image.objects.filter(CheckoutTable=Image.pk)
-        #exclude = ('image_id')
-        row_attrs = {'image_name': lambda record:getattr(Image,'pk')}
+        exclude = ('image')
+        #row_attrs = {'image_name': lambda record:getattr(Image,'image_name')}
         #edit_entries = tables.TemplateColumn('<a href="/tracksheet/image/{{image.image_name}}">Edit</a>')
         empty_text = "There are no Images matching the search criteria..."
         #sequence = ('Image_Name','image_type')
@@ -70,22 +73,20 @@ class CheckoutTable(tables.Table):
 
 
 class CheckoutHistoryTable(tables.Table):
+    #image_name = tables.Column(accessor='Image.image_name')
 
     #Image.image_name = tables.LinkColumn('image', args=[A('pk')])
     #name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')])
-    #image_id = tables.LinkColumn('image', args=[A('pk')],text=lambda image: image.image_id, orderable=True, empty_values=())
-    #if get_user().has_perms()
-
-    #image_name = tables.LinkColumn('image name',args=[A('')])
-    image_name = tables.LinkColumn('image', args=[A('get_image_id')], text=lambda image: image.image_name, orderable=True,empty_values=())
+    image_name = tables.LinkColumn('image', args=[A('image.id')], text=lambda image: image.image.image_name,
+                                   orderable=True, empty_values=())
+    #image_id = tables.LinkColumn('image', args=[A('image_id')], text=lambda image: image.image_name, orderable=True,empty_values=())
     Edit = tables.TemplateColumn('<a href="/tracksheet/checkout/edit/{{ record.id }}"><button type="button" class="btn btn-warning btn-xs">Edit</button></a>')
     #Delete = tables.TemplateColumn('<a href="/tracksheet/checkout/delete/{{record.id}}"><button type="button" class="btn btn-danger btn-xs">Delete</button></a>')
     image_status = tables.TemplateColumn('<span class="label label-success">{{record.image_status}}</span>',verbose_name="Status")
     class Meta:
         model = Checkout
-
         sequence = ('id','image_name','created_by','checkout_at','checkin_at','image_status','image_objects','comment')
-        #exclude = ('image_id')
+        exclude = ('image')
         #row_attrs = {'image_name': lambda record:}
         #edit_entries = tables.TemplateColumn('<a href="/tracksheet/image/{{image.image_name}}">Edit</a>')
         empty_text = "There are no Checkout matching the search criteria..."
@@ -110,4 +111,21 @@ class ProjectTable(ColumnShiftTable):
         exclude = ['completed_date','uploaded_date','updated_at','updated_by']
         empty_text = "There are no Projects matching the search criteria..."
         sequence = ('id','project_name','customer','project_type','start_date','end_date','resources','total_packages','current_uploaded','project_status')
+        #id = id
+
+class MyImageTable(tables.Table):
+    view = tables.TemplateColumn(
+        '<a href="/tracksheet/images/{{record.id}}"><button type="button" class="btn btn-info btn-xs"> Details </button></a>')
+    # Editcheckout = tables.TemplateColumn('<button type="button" class="btn btn-warning btn-xs"><a href="/tracksheet/checkout/edit/{{record.id}}">Edit</a></button>')
+    checkout = tables.TemplateColumn(
+        '<a href="/tracksheet/checkout/add/{{record.id}}"><button type="button" class="btn btn-warning btn-xs">Checkout</button></a>')
+
+    image_name = tables.LinkColumn('image', text=lambda image: image.image_name, args=[A('pk')], orderable=True,
+                                   verbose_name='Image Name')
+
+    class Meta:
+        model = Image
+        exclude = ['updated_at', 'updated_by','created_at','created_by', 'file_type', 'image_type']
+        empty_text = "There are no Images matching the search criteria..."
+        sequence = ('id', 'project', 'package', 'folder', 'sequence', 'set','image_name', 'status', 'label_time', 'correction_time', 'loop_on_image')
         #id = id

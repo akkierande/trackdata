@@ -10,7 +10,6 @@ import re
 
 
 def index(request):
-
     if '_auth_user_id' in request.session:
         return redirect('/tracksheet/')
     else:
@@ -47,14 +46,28 @@ def register(request):
     return render(request,'registration/register.html', {'form' : form})
 
 def logout_view(request):
-
     auth.logout(request)
+
+
 
     #HttpResponseRedirect("registration/logout.html")
 
     # Redirect to a success page.
     return HttpResponseRedirect("/")
 
+# from django.shortcuts import render_to_response
+# from django.template import RequestContext
+#
+# def handler404(request):
+#     response = render_to_response('404.html',{},context_instance=RequestContext(request))
+#     response.status_code = 404
+#     return response
+#
+# def handler500(request):
+#     response = render_to_response('500.html', {},
+#                                   context_instance=RequestContext(request))
+#     response.status_code = 500
+#     return response
 
 
 #Use Pip ==== pip install -r requirement.txt
