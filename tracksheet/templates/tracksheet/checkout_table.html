@@ -6,6 +6,7 @@
 {% load bootstrap3 %}
 {% bootstrap_css %}
 {% block body %}
+
     <div class="row">
         <div class="col-xs-12">
             <div class="box box-success">
@@ -19,8 +20,8 @@
                 <div class="col-sm-12">
 
                 </div>
-                <div class="col-sm-12">
-                    {% render_table table 'django_tables2/bootstrap.html' %}
+                <div class="col-sm-12 table-responsive">
+                    {% render_table table "tracksheet/pagination_table.html" %}
                 </div>
 
                 <div class="box-footer clearfix">

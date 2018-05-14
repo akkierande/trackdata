@@ -25,9 +25,10 @@ SECRET_KEY = '9d7p9=@5g9f)w2yf2hdriur*earzjxyi6plz7xx3(miwkrlamc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.11.228']
 
+ALLOWED_HOSTS = ["*",]
 
+#INTERNAL_IPS = ["localhost"]
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
     'django_filters',
     'bootstrap3',
@@ -47,9 +49,13 @@ INSTALLED_APPS = [
     'datetimewidget',
     'initial_avatars',
     'bulk_admin',
+    'django_messages',
+    'compressor',
+    'django_admin_listfilter_dropdown',
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -58,7 +64,16 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+
 ]
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
+
 
 ROOT_URLCONF = 'trackdata.urls'
 
@@ -69,6 +84,9 @@ TEMPLATES = [
             BASE_DIR +'/templates',
             BASE_DIR +'/templates/registration',
             BASE_DIR +'/templates/tracksheet',
+            BASE_DIR +'/templates/tracksheet/messages',
+            BASE_DIR +'/templates/tracksheet/notification',
+
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -77,6 +95,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django_messages.context_processors.inbox',
             ],
         },
     },
@@ -85,13 +104,19 @@ TEMPLATES = [
 WSGI_APPLICATION = 'trackdata.wsgi.application'
 
 
+
+
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'trackpro',
+        'PASSWORD': 'Password@123',
+        'USER': 'pc84',
+        'HOST': 'localhost',
+        'PORT' : '',
     }
 }
 
@@ -128,17 +153,33 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+SITE_ID = 2
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 STATIC_URL = '/static/'
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 21000
+
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
+COMPRESS_PARSER = 'compressor.parser.LxmlParser'
+# COMPRESS_CSS_FILTERS = [
+#     'compressor.filters.css_default.CssAbsoluteFilter',
+#     'compressor.filters.cssmin.CSSMinFilter',
+#     ]
+# COMPRESS_JS_FILTERS = [
+#     'compressor.filters.closure.ClosureCompilerFilter',
+# ]
+
+#COMPRESS_CLOSURE_COMPILER_BINARY = 'java -jar /path/to/compiler.jar'
+
+
 
 LOGIN_REDIRECT_URL = '/tracksheet/'
 LOGOUT_REDIRECT_URL = '/'
 #CRISPY_TEMPLATE_PACK = 'uni_form'
-
+#
 MEDIA_ROOT = os.path.join(BASE_DIR,'MEDIA')
 MEDIA_URL='/media/'
 # # AVATAR_STORAGE_BACKEND = 'trackdata.custom_storages.AvatarStorage'
@@ -147,3 +188,22 @@ MEDIA_URL='/media/'
 AVATAR_HIGH_RESOLUTION = True
 AVATAR_COLORS = ((0,0, 0), (0, 0, 0),)
 GRAVATAR_DEFAULT_SIZE = 200
+
+
+
+#Email Configuration
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_HOST = 'smtp.office365.com'
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = 'AEaur#1010'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'akshaye@ec-mobility.biz'
+# SERVER_EMAIL = 'akshaye@ec-mobility.biz'
+#ENCRIPTION_: STARTTLS
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'akkierande@gmail.com'
+# EMAIL_HOST_PASSWORD = 'Prem7736'
+# EMAIL_PORT = 587

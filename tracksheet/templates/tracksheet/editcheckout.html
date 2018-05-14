@@ -8,6 +8,8 @@
 <script src="{% static 'tracksheet/bower_components/jquery.min.js'%}"></script>
 <script>
 $(document).ready(function(){
+
+
         $("#checkin_at").after("<span class='input-group-addon' id='get_time'><span class='glyphicon glyphicon-time'></span></span>");
 
         Number.prototype.padLeft = function(base,chr){
@@ -28,13 +30,29 @@ $(document).ready(function(){
         });
 
 });
+
+
 </script>
+{% ifequal request.user.groups.all.0.name 'Labeller'%}
+<script>
+$(document).ready(function(){
+    document.getElementById("layer_issues").style.display = "none";
+    document.getElementById("border_issues").style.display = "none";
+    document.getElementById("missing_objects").style.display = "none";
+});
+</script>
+<style>[for = "layer_issues"] {display : none ; }</style>
+<style>[for = "border_issues"] {display : none ; }</style>
+<style>[for = "missing_objects"] {display : none ; }</style>
+
+{% endifequal %}
 
 {{ form.media }}
 
-<div class="box box-warning">
+<div class="box box-warning" onload="hf()">
     <div class="box-header with-border">
-        <h2 class="box-title">Edit Checkout of <b>{{instance}}</b></h2>
+
+        <h2 class="box-title">Check-in of <b>{{instance}}</b></h2>
         <div class="box-tools pull-right">
             <a class="btn btn-warning btn-sm" href="/tracksheet/checkout/add/{{id}}" role="button"> Back </a>
         </div>
@@ -54,7 +72,7 @@ $(document).ready(function(){
                 {% endfor %}
                 </div>
                 {% endif %}
-                <div class="form-group pull-right">
+                <div class="form-group">
                     <form method="POST" role="form">
                         {% csrf_token %}
                         {{ form }}

@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-success">
-            {% if perms.project.view_projects %}
+            <!--{% if perms.project.view_projects %}-->
             <div class="box-header">
                 <h3 class="box-title">Project Data</h3>
                 <form action="" method="get" class="form form-inline pull-right">
@@ -19,14 +19,14 @@
                 </form>
             </div>
             <div class="col-sm-12">
-                {% render_table table %}
+                {% render_table table "tracksheet/pagination_table.html" %}
             </div>
             <div class="box-footer clearfix">
-            {% else %}
-            <div class="alert alert-warning" role="alert">
-            You are Not Authorised To View This Details
-            </div>
-            {% endif %}
+            <!--{% else %}-->
+            <!--<div class="alert alert-warning" role="alert">-->
+            <!--You are Not Authorised To View This Details-->
+            <!--</div>-->
+            <!--{% endif %}-->
             </div>
         </div>
     </div>

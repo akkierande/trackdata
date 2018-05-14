@@ -2,6 +2,8 @@
 {% load i18n static %}
 {% load tags %}
 {% load initialavatar %}
+{% load cache %}
+{% load compress %}
 <!-- Bootstrap 3.3.7 -->
 <!DOCTYPE html>
 <html>
@@ -11,6 +13,7 @@
     <title>{% block title %}{% endblock %}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    {% compress css %}
     <link rel="stylesheet" href="{% static 'tracksheet/bower_components/bootstrap/dist/css/bootstrap.min.css'%}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{% static 'tracksheet/bower_components/font-awesome/css/font-awesome.min.css'%}">
@@ -35,10 +38,15 @@
     <link rel="stylesheet" href="{% static 'tracksheet/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'%}">
 
     <link rel="stylesheet" href="{% static 'django_tables2/bootstrap.css' %}"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'tracksheet/dist/css/font_roboto.css' %}"/>
+    {% endcompress %}
+    {% cache 500 basecss %}
+
+     <!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
     <!-- Google Font -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <!--<link rel="stylesheet"-->
+          <!--href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
+    {% endcache %}
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -151,7 +159,7 @@
                             <!--<li class="footer"><a href="#">See All Messages</a></li>-->
                         <!--</ul>-->
                     <!--</li>-->
-                    <!---->
+
                     <!--<li class="dropdown notifications-menu">-->
                         <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
                             <!--<i class="fa fa-bell-o"></i>-->
@@ -276,7 +284,8 @@
                             <!--</li>-->
                         <!--</ul>-->
                     <!--</li>-->
-                    <!-- User Account: style can be found in dropdown.less -->
+
+                     <!--User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
@@ -295,20 +304,20 @@
                                 </p>
                             </li>
                             <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
-                            </li>
+                            <!--<li class="user-body">-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col-xs-4 text-center">-->
+                                        <!--<a href="#">Followers</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-xs-4 text-center">-->
+                                        <!--<a href="#">Sales</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-xs-4 text-center">-->
+                                        <!--<a href="#">Friends</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash; /.row &ndash;&gt;-->
+                            <!--</li>-->
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
@@ -339,57 +348,67 @@
                 </div>
             </div>
             <!-- search form -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search...">
-                    <span class="input-group-btn">
-            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-            </button>
-          </span>
-                </div>
-            </form>
+
+
+                    <!--<input type="text" name="q" class="form-control" placeholder="Search...">-->
+                    <!--<span class="input-group-btn">-->
+            <!--<button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>-->
+            <!--</button>-->
+          <!--</span>-->
+
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
+                <li class="header"></li>
+
                 <li class="header">MAIN NAVIGATION</li>
                 <li class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">
                     <a href="/tracksheet">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="header">My Work</li>
-                <li class="{% if request.resolver_match.url_name == 'assignment' %}active{% endif %}"><a href="/tracksheet/assign/"><i class="fa fa-book"></i> <span>My Work</span></a></li>
+                <li class="header">Assigned Task</li>
+                <li class="{% if request.resolver_match.url_name == 'assignment' %}active{% endif %}"><a href="/tracksheet/assign/"><i class="fa fa-book"></i> <span>Assigned Task</span></a></li>
                 <li class="header">All Data Tables</li>
-                <li class="treeview {% if request.resolver_match.url_name == 'images' or request.resolver_match.url_name == 'checkout' or request.resolver_match.url_name == 'packages' or request.resolver_match.url_name == 'projects' %}active menu-open{% endif %}">
-                    <a href="#">
-                        <i class="fa fa-files-o"></i>
-                        <span>Tables</span>
-                        <span class="pull-right-container">
-                        <span class="label label-primary pull-right">4</span>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class="{% if request.resolver_match.url_name == 'images' %}active{% endif %}" ><a href="/tracksheet/images/"><i class="fa fa-circle-o"></i>Image Table</a></li>
-                        <li class="{% if request.resolver_match.url_name == 'checkout' %}active{% endif %}"><a href="/tracksheet/checkout/"><i class="fa fa-circle-o"></i>Checkout Table</a></li>
+                <!--<li class="treeview {% if request.resolver_match.url_name == 'images' or request.resolver_match.url_name == 'checkout' or request.resolver_match.url_name == 'packages' or request.resolver_match.url_name == 'projects' %}active menu-open{% endif %}">-->
+                    <!--<a href="#">-->
+                        <!--<i class="fa fa-files-o"></i>-->
+                        <!--<span>Tables</span>-->
+                        <!--<span class="pull-right-container">-->
+                        <!--<span class="label label-primary pull-right">4</span>-->
+                        <!--</span>-->
+                    <!--</a>-->
+                    <!--<ul class="treeview-menu">-->
 
-                        <li class="{% if request.resolver_match.url_name == 'packages' %}active{% endif %}"><a href="/tracksheet/packages/"><i class="fa fa-circle-o"></i>Package Table</a></li>
-                        <li class="{% if request.resolver_match.url_name == 'projects' %}active{% endif %}"><a href="/tracksheet/projects/"><i class="fa fa-circle-o"></i>Project Table</a></li>
+                    <!--</ul>-->
+                <!--</li>-->
+                <li class="{% if request.resolver_match.url_name == 'images' %}active{% endif %}" ><a href="/tracksheet/images/"><i class="fa fa-circle-o"></i>Images</a></li>
+                <li class="{% if request.resolver_match.url_name == 'checkout' %}active{% endif %}"><a href="/tracksheet/checkout/"><i class="fa fa-circle-o"></i>Checkouts</a></li>
+                {% if perms.package.view_package %}
+                <li class="{% if request.resolver_match.url_name == 'packages' %}active{% endif %}"><a href="/tracksheet/packages/"><i class="fa fa-circle-o"></i>Packages</a></li>
+                {% endif %}
+                {% if perms.project.view_projects %}
+                <li class="{% if request.resolver_match.url_name == 'projects' %}active{% endif %}"><a href="/tracksheet/projects/"><i class="fa fa-circle-o"></i>Projects</a></li>
+                {% endif %}
+                <li class="header">Graphs & Charts</li>
+                <li class="{% if request.resolver_match.url_name == 'graphs' %}active{% endif %}"><a href="/tracksheet/images/chart/"><i class="fa fa-circle-o"></i>Image Charts</a></li>
+                {% if request.user|has_group:"Data analyst" %}
+                <li class="{% if request.resolver_match.url_name == 'myexport' %}active{% endif %}"><a href="/tracksheet/myexport/"><i class="fa fa-circle-o"></i>My Export</a></li>
+                {% endif %}
+                <!--<li class="treeview {% if request.resolver_match.url_name == 'graphs' %}active menu-open {% endif %}">-->
+                    <!--<a href="#">-->
+                        <!--<i class="fa fa-pie-chart"></i>-->
+                        <!--<span>Graphs & Charts</span>-->
+                    <!--</a>-->
+                    <!--<ul class="treeview-menu">-->
+                        <!---->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="header">Documentation</li>-->
+                <!--<li class="{% if request.resolver_match.url_name == 'article' %}active{% endif %}"><a href="/tracksheet/article/"><i class="fa fa-book"></i> <span>Documentation</span></a></li>-->
+                <!--<li class="header">Messages</li>-->
 
-                    </ul>
-                </li>
-                <li class="header">All Graphs & Charts</li>
-                <li class="treeview {% if request.resolver_match.url_name == 'graphs' %}active menu-open {% endif %}">
-                    <a href="#">
-                        <i class="fa fa-pie-chart"></i>
-                        <span>Graphs & Charts</span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class="{% if request.resolver_match.url_name == 'graphs' %}active{% endif %}"><a href="/tracksheet/images/chart/"><i class="fa fa-circle-o"></i>Image Charts</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="header">Documentation</li>
-                <li class="{% if request.resolver_match.url_name == 'article' %}active{% endif %}"><a href="/tracksheet/article/"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+                <!--<li class="{% if request.resolver_match.url_name == 'article' %}active{% endif %}"><a href="/tracksheet/article/"><i class="fa fa-book"></i> <span>Massaging</span></a></li>-->
                 <!--<li class="header">Notice</li>-->
                 <!--<li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>-->
                 <!--<li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>-->
@@ -415,6 +434,7 @@
         </section>
 
         <section class="content">
+            {% if perms.package.view_package %}
             <div class="row">
                 <div class="col-lg-3 col-xs-6">
                     <!-- small box -->
@@ -451,10 +471,12 @@
                             <h3 class="Count">{% number_of_users request %}</h3>
 
                             <p>User Registrations</p>
+
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
+                        <!--<p class="pull-right">{% number_of_users_current_month request %}</p>-->
                         <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -463,34 +485,85 @@
                     <!-- small box -->
                     <div class="small-box bg-red">
                         <div class="inner">
-                            <h3 class="Count">{% number_of_visitor request %}</h3>
+                            <h3 class="Count">{% number_of_checkouts request %}</h3>
 
-                            <p>Unique Visitors</p>
+                            <p>Total Checkouts</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-pie-graph"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="/tracksheet/checkout/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
             </div>
-            <!-- Main content -->
+            {% endif %}
+            <!--<div class="row">-->
+        <!--<div class="col-md-3 col-sm-6 col-xs-12">-->
+          <!--<div class="info-box">-->
+            <!--<span class="info-box-icon bg-aqua"><i class="fa fa-envelope-o"></i></span>-->
 
+            <!--<div class="info-box-content">-->
+              <!--<span class="info-box-text">Images</span>-->
+              <!--<h3>93,139</h3>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /.info-box-content &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /.info-box &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /.col &ndash;&gt;-->
+        <!--<div class="col-md-3 col-sm-6 col-xs-12">-->
+          <!--<div class="info-box">-->
+            <!--<span class="info-box-icon bg-green"><i class="fa fa-flag-o"></i></span>-->
+
+            <!--<div class="info-box-content">-->
+              <!--<span class="info-box-text">Users</span>-->
+              <!--<h3>93,139</h3>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /.info-box-content &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /.info-box &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /.col &ndash;&gt;-->
+        <!--<div class="col-md-3 col-sm-6 col-xs-12">-->
+          <!--<div class="info-box">-->
+            <!--<span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>-->
+
+            <!--<div class="info-box-content">-->
+              <!--<span class="info-box-text">Uploads</span>-->
+              <!--<h3>93,139</h3>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /.info-box-content &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /.info-box &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /.col &ndash;&gt;-->
+        <!--<div class="col-md-3 col-sm-6 col-xs-12">-->
+          <!--<div class="info-box">-->
+            <!--<span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>-->
+
+            <!--<div class="info-box-content">-->
+              <!--<span class="info-box-text">Likes</span>-->
+                <!--<h3>93,139</h3>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /.info-box-content &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /.info-box &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /.col &ndash;&gt;-->
+      <!--</div>-->
+            <!-- Main content -->
             {% block body %}
             {% endblock %}
-
-
-
         </section>
     </div>
 
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
-            <b>Version</b> 2.4.0
+            <b>Version</b> 1.0
         </div>
-        <strong>Copyright &copy; 2014-2016 <a href="#">Track PRO</a>.</strong> All rights
+        <strong>Copyright &copy; 2017-2018 <a href="#">Track PRO</a>.</strong> All rights
         reserved.
     </footer>
 
@@ -500,16 +573,12 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery 3 -->
-<script src="{% static 'tracksheet/bower_components/jquery/dist/jquery.min.js'%}"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="{% static 'tracksheet/bower_components/jquery-ui/jquery-ui.min.js'%}"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
+
 <script>
-$('.Count').each(function () {
+$('.Count').one('click',function () {
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
     }, {
@@ -521,6 +590,13 @@ $('.Count').each(function () {
     });
 });
 </script>
+
+{% compress js inline %}
+<!-- jQuery 3 -->
+<script src="{% static 'tracksheet/bower_components/jquery/dist/jquery.min.js'%}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'tracksheet/bower_components/jquery-ui/jquery-ui.min.js'%}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <!-- Bootstrap 3.3.7 -->
 <script src="{% static 'tracksheet/bower_components/bootstrap/dist/js/bootstrap.min.js'%}"></script>
 <!-- Morris.js charts -->
@@ -552,18 +628,21 @@ $('.Count').each(function () {
 
 <script src="{% static 'tracksheet/dist/js/pages/dashboard2.js'%}"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="{% static 'tracksheet/dist/js/js/jquery.1.8.3.min.js' %}"></script>
 
 
 <script
     type="text/javascript"
     src="{% static 'django_tables2_column_shifter/js/django_tables2_column_shifter.min.js' %}">
 </script>
-{% include 'tracksheet/js.html' %}
+{% endcompress %}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+
 <script>
     $(document).ready(function(){
       {% block jquery %}{% endblock %}
     })
 </script>
+
 </body>
 </html>

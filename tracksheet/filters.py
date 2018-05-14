@@ -3,9 +3,15 @@ from django_filters import FilterSet
 import django_filters as filters
 
 from .models import Package,Image,Project,Checkout
+from django import forms
 
 class ImageFilter(FilterSet):
     image_name = filters.CharFilter(label='Image -',lookup_expr='icontains')
+    created_at = django_filters.DateFilter(lookup_expr='contains', widget=forms.DateInput(
+        attrs={
+            'class': 'datepicker',
+            'type': 'date'
+        }))
     class Meta:
         model = Image
 
@@ -23,6 +29,8 @@ class ImageFilter(FilterSet):
             'set':['exact'],
             'sequence': ['exact'],
             'folder': ['exact'],
+            'status': ['exact'],
+            'label_by':['contains'],
         }
         # exclude = {
         #     'created_by':['exact'],
@@ -76,18 +84,34 @@ class CheckoutFilter(FilterSet):
     class Meta:
 
         model = Checkout
-        fields = {
 
+        fields = {
             'image_status':['exact'],
             'created_by': ['exact'],
         }
 
 class CheckoutHistoryFilter(FilterSet):
     # name = Checkout.get_image_name
+
     image_name = filters.CharFilter(label='Image -', lookup_expr='iexact')
     class Meta:
         model = Checkout
         fields = {
             'image_status':['exact'],
             'created_by': ['exact'],
+        }
+
+class AssignFilter(FilterSet):
+    assign_at = django_filters.DateFilter(lookup_expr='contains',widget=forms.DateInput(
+        attrs = {
+            'class' : 'datepicker',
+            'type' : 'date'
+        }))
+    #empty_text = "There are no project matching the search criteria..."
+    class Meta:
+        model = Image
+        fields = {
+            'image_name': ['contains'],
+            'status': ['exact'],
+            'assign_at':['exact'],
         }

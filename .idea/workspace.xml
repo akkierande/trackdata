@@ -2,24 +2,188 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bda3a743-056d-412f-be04-596f4bceb116" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/editcheckout.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/no-global-site-packages.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip-9.0.1.dist-info/DESCRIPTION.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip-9.0.1.dist-info/INSTALLER" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip-9.0.1.dist-info/METADATA" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip-9.0.1.dist-info/RECORD" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip-9.0.1.dist-info/WHEEL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip-9.0.1.dist-info/entry_points.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip-9.0.1.dist-info/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip-9.0.1.dist-info/top_level.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/big5freq.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/big5prober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/chardetect.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/chardistribution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/charsetgroupprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/charsetprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/codingstatemachine.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/compat.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/constants.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/cp949prober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/escprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/escsm.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/eucjpprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/euckrfreq.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/euckrprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/euctwfreq.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/euctwprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/gb2312freq.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/gb2312prober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/hebrewprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/jisfreq.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/jpcntx.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/langbulgarianmodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/langcyrillicmodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/langgreekmodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/langhebrewmodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/langhungarianmodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/langthaimodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/latin1prober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/mbcharsetprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/mbcsgroupprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/mbcssm.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/sbcharsetprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/sbcsgroupprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/sjisprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/universaldetector.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/utf8prober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/_collections.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/connection.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/connectionpool.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/contrib/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/contrib/appengine.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/contrib/ntlmpool.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/contrib/socks.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/exceptions.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/fields.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/filepost.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/packages/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/packages/ordered_dict.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/packages/six.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/packages/ssl_match_hostname/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/poolmanager.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/request.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/response.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/connection.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/request.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/response.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/retry.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/timeout.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/url.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools-36.6.0.dist-info/DESCRIPTION.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools-36.6.0.dist-info/INSTALLER" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools-36.6.0.dist-info/METADATA" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools-36.6.0.dist-info/RECORD" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools-36.6.0.dist-info/WHEEL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools-36.6.0.dist-info/dependency_links.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools-36.6.0.dist-info/entry_points.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools-36.6.0.dist-info/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools-36.6.0.dist-info/top_level.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools-36.6.0.dist-info/zip-safe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/py26compat.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel-0.30.0.dist-info/DESCRIPTION.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel-0.30.0.dist-info/INSTALLER" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel-0.30.0.dist-info/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel-0.30.0.dist-info/METADATA" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel-0.30.0.dist-info/RECORD" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel-0.30.0.dist-info/WHEEL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel-0.30.0.dist-info/entry_points.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel-0.30.0.dist-info/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel-0.30.0.dist-info/top_level.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/decorator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/image_detail.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/bin/python" afterPath="$PROJECT_DIR$/ENV/bin/python" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/bin/python2" afterPath="$PROJECT_DIR$/ENV/bin/python2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/bin/python2.7" afterPath="$PROJECT_DIR$/ENV/bin/python2.7" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/static/tracksheet/dist/banner-images/banner-image-1.jpg" afterPath="$PROJECT_DIR$/tracksheet/static/tracksheet/dist/banner-images/banner-image-1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/trackdata.iml" afterPath="$PROJECT_DIR$/.idea/trackdata.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/bin/easy_install" afterPath="$PROJECT_DIR$/ENV/bin/easy_install" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/bin/easy_install-2.7" afterPath="$PROJECT_DIR$/ENV/bin/easy_install-2.7" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/bin/pip" afterPath="$PROJECT_DIR$/ENV/bin/pip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/bin/pip2" afterPath="$PROJECT_DIR$/ENV/bin/pip2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/bin/pip2.7" afterPath="$PROJECT_DIR$/ENV/bin/pip2.7" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/bin/wheel" afterPath="$PROJECT_DIR$/ENV/bin/wheel" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/__init__.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/cachecontrol/compat.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/cachecontrol/compat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/__init__.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/adapters.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/adapters.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/api.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/auth.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/auth.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/cacert.pem" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/cacert.pem" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/certs.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/certs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/compat.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/compat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/cookies.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/cookies.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/exceptions.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/exceptions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/models.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/sessions.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/sessions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/status_codes.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/status_codes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/utils.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/_vendor/requests/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/download.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pip/download.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pkg_resources/__init__.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/pkg_resources/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/__init__.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/archive_util.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/archive_util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/build_meta.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/build_meta.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/__init__.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/bdist_egg.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/bdist_egg.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/build_ext.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/build_ext.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/develop.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/develop.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/dist_info.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/dist_info.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/easy_install.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/easy_install.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/egg_info.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/egg_info.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/sdist.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/sdist.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/test.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/command/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/config.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/dist.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/dist.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/extern/__init__.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/extern/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/monkey.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/monkey.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/msvc.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/msvc.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/package_index.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/package_index.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/py31compat.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/py31compat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/py33compat.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/py33compat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/sandbox.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/sandbox.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/ssl_support.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/setuptools/ssl_support.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/__init__.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/archive.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/archive.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/bdist_wheel.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/bdist_wheel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/egg2wheel.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/egg2wheel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/install.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/install.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/metadata.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/metadata.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/signatures/djbec.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/signatures/djbec.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/tool/__init__.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/tool/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/util.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/wininst2wheel.py" afterPath="$PROJECT_DIR$/ENV/lib/python2.7/site-packages/wheel/wininst2wheel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENV/pip-selfcheck.json" afterPath="$PROJECT_DIR$/ENV/pip-selfcheck.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trackdata/settings.py" afterPath="$PROJECT_DIR$/trackdata/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trackdata/urls.py" afterPath="$PROJECT_DIR$/trackdata/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trackdata/views.py" afterPath="$PROJECT_DIR$/trackdata/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/admin.py" afterPath="$PROJECT_DIR$/tracksheet/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/filters.py" afterPath="$PROJECT_DIR$/tracksheet/filters.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/forms.py" afterPath="$PROJECT_DIR$/tracksheet/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/models.py" afterPath="$PROJECT_DIR$/tracksheet/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/tables.py" afterPath="$PROJECT_DIR$/tracksheet/tables.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/registration/register.html" afterPath="$PROJECT_DIR$/tracksheet/templates/registration/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/admin/base_site.html" afterPath="$PROJECT_DIR$/tracksheet/templates/admin/base_site.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/assign_table.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/assign_table.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/hometheme.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/hometheme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/editcheckout.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/editcheckout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/image-graph.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/image-graph.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/package_table.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/package_table.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/profile.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templates/tracksheet/project_table.html" afterPath="$PROJECT_DIR$/tracksheet/templates/tracksheet/project_table.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/templatetags/tags.py" afterPath="$PROJECT_DIR$/tracksheet/templatetags/tags.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/urls.py" afterPath="$PROJECT_DIR$/tracksheet/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracksheet/views.py" afterPath="$PROJECT_DIR$/tracksheet/views.py" />
@@ -39,47 +203,64 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracksheet/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="36" column="10" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+            <state relative-caret-position="2970">
+              <caret line="191" column="9" lean-forward="false" selection-start-line="191" selection-start-column="9" selection-end-line="191" selection-end-column="9" />
               <folding>
-                <element signature="e#0#81#0" expanded="true" />
-                <element signature="e#3967#4161#0" expanded="false" />
-                <element signature="e#4200#4268#0" expanded="false" />
-                <element signature="e#4312#5360#0" expanded="false" />
-                <element signature="e#5597#6921#0" expanded="false" />
-                <element signature="e#6961#9023#0" expanded="false" />
+                <marker date="1525926032467" expanded="true" signature="4133:4370" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/filters.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+            <state relative-caret-position="1872">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#24#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/forms.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="32" column="70" lean-forward="false" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="70" />
+            <state relative-caret-position="2682">
+              <caret line="149" column="29" lean-forward="false" selection-start-line="149" selection-start-column="29" selection-end-line="149" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image-graph.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/image-graph.html">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1818">
-              <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+            <state relative-caret-position="540">
+              <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2664">
+              <caret line="401" column="31" lean-forward="false" selection-start-line="401" selection-start-column="31" selection-end-line="401" selection-end-column="31" />
+              <folding>
+                <element signature="n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editcheckout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/editcheckout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1134">
+              <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -88,8 +269,8 @@
       <file leaf-file-name="tags.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracksheet/templatetags/tags.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+            <state relative-caret-position="288">
+              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
               <folding>
                 <element signature="e#42#123#0" expanded="true" />
               </folding>
@@ -97,71 +278,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/admin.py">
+      <file leaf-file-name="filters.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/filters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1098">
-              <caret line="70" column="53" lean-forward="false" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
-              <folding>
-                <element signature="e#24#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tracksheet/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-198">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#24#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trackdata/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="-270">
+              <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html">
+      <file leaf-file-name="image_table.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1602">
-              <caret line="89" column="34" lean-forward="false" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#0;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#li#2;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#li#3;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#li#4;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#li#5;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="25" column="66" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html">
+      <file leaf-file-name="pagination_table.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/pagination_table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1422">
-              <caret line="422" column="45" lean-forward="false" selection-start-line="422" selection-start-column="32" selection-end-line="422" selection-end-column="45" />
-              <folding>
-                <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="60" column="17" lean-forward="false" selection-start-line="58" selection-start-column="12" selection-end-line="60" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,15 +320,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>momen</find>
-      <find>respo</find>
-      <find>web</find>
-      <find>149</find>
-      <find>tra</find>
-      <find>edit</find>
-      <find>description</find>
-      <find>descr</find>
-      <find>track</find>
       <find>https</find>
       <find>Namari</find>
       <find>form</find>
@@ -195,7 +328,6 @@
       <find>regist</find>
       <find>regi</find>
       <find>contex</find>
-      <find>total</find>
       <find>block</find>
       <find>name</find>
       <find>reve</find>
@@ -205,6 +337,19 @@
       <find>get_im</find>
       <find>get_image</find>
       <find>inde</find>
+      <find>total</find>
+      <find>version</find>
+      <find>sear</find>
+      <find>i a</find>
+      <find>my</find>
+      <find>render_to_response</find>
+      <find>proj</find>
+      <find>task</find>
+      <find>User,'username'</find>
+      <find>image ch</find>
+      <find>tot</find>
+      <find>firs</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,65 +361,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tracksheet/templates/Package.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/Package.html" />
-        <option value="$USER_HOME$/django-tables2/example/app/views.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/table.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/image.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/admin/base_site.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/image_detail.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/addCheckout.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/calender.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templatetags/mytags.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/imagecheckout.html" />
-        <option value="$PROJECT_DIR$/ENV/Lib/datetimewidgets.py" />
-        <option value="$PROJECT_DIR$/tracksheet/select_time_widget.py" />
         <option value="$PROJECT_DIR$/tracksheet/templatetags/splitdatetimewidget.py" />
         <option value="$PROJECT_DIR$/tracksheet/django_widgets.py" />
         <option value="$PROJECT_DIR$/tracksheet/datetimewidgets.py" />
         <option value="$PROJECT_DIR$/tracksheet/widg.py" />
         <option value="$PROJECT_DIR$/tracksheet/widgets.py" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/imgDetail.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/registration/logout.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/package_table.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/project_table.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout.html" />
         <option value="$PROJECT_DIR$/tracksheet/avatar_backend.py" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/hometheme.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/js.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/charts.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/registration/register.html" />
-        <option value="$PROJECT_DIR$/trackdata/urls.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/assign_table.html" />
-        <option value="$PROJECT_DIR$/tracksheet/urls.py" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/article.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/registration/password_reset_form.html" />
         <option value="$PROJECT_DIR$/trackdata/views.py" />
-        <option value="$PROJECT_DIR$/trackdata/settings.py" />
-        <option value="$PROJECT_DIR$/tracksheet/forms.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/admin/base_site.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/profile.html" />
-        <option value="$PROJECT_DIR$/tracksheet/tables.py" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/inbox.html" />
+        <option value="$USER_HOME$/.local/lib/python2.7/site-packages/django_messages/urls.py" />
+        <option value="$USER_HOME$/.local/lib/python2.7/site-packages/django_messages/views.py" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/messages/compose.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/messages/base.html" />
+        <option value="$PROJECT_DIR$/trackdata/crutch.py" />
+        <option value="$PROJECT_DIR$/trackdata/urls.py" />
+        <option value="$PROJECT_DIR$/tracksheet/mixins.py" />
+        <option value="$PROJECT_DIR$/tracksheet/static/tracksheet/dist/css/font_roboto.css" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/js.html" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/editcheckout.html" />
-        <option value="$PROJECT_DIR$/tracksheet/filters.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html" />
-        <option value="$PROJECT_DIR$/tracksheet/admin.py" />
-        <option value="$PROJECT_DIR$/tracksheet/views.py" />
-        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/image-graph.html" />
-        <option value="$PROJECT_DIR$/tracksheet/templatetags/tags.py" />
         <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/item_edit_form_success.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/item_edit_form.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/item_list.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/editcheckout.html" />
+        <option value="$PROJECT_DIR$/tracksheet/tables.py" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/package_table.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/project_table.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/assign_table.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/image-graph.html" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html" />
+        <option value="$PROJECT_DIR$/tracksheet/filters.py" />
+        <option value="$PROJECT_DIR$/tracksheet/urls.py" />
+        <option value="$PROJECT_DIR$/tracksheet/forms.py" />
+        <option value="$PROJECT_DIR$/tracksheet/admin.py" />
         <option value="$PROJECT_DIR$/tracksheet/models.py" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html" />
+        <option value="$PROJECT_DIR$/tracksheet/views.py" />
+        <option value="$PROJECT_DIR$/tracksheet/templatetags/tags.py" />
+        <option value="$PROJECT_DIR$/trackdata/settings.py" />
+        <option value="$PROJECT_DIR$/tracksheet/templates/tracksheet/pagination_table.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="53" />
-    <option name="y" value="465" />
-    <option name="width" value="1867" />
-    <option name="height" value="1028" />
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -298,7 +443,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>PyCompatibilityInspection</id>
+            <id>PyPackageRequirementsInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -322,6 +467,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,6 +479,11 @@
             <path>
               <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
               <item name="trackdata" type="462c0819:PsiDirectoryNode" />
+              <item name="ENV" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trackdata" type="462c0819:PsiDirectoryNode" />
               <item name="trackdata" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -344,20 +496,6 @@
               <item name="trackdata" type="462c0819:PsiDirectoryNode" />
               <item name="tracksheet" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trackdata" type="462c0819:PsiDirectoryNode" />
-              <item name="tracksheet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trackdata" type="462c0819:PsiDirectoryNode" />
-              <item name="tracksheet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
@@ -372,36 +510,30 @@
               <item name="tracksheet" type="462c0819:PsiDirectoryNode" />
               <item name="templatetags" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="trackdata" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../itool" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html" />
+    <property name="two.files.diff.last.used.file" value="$USER_HOME$/Desktop/views.py" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tracksheet" />
-      <recent name="$PROJECT_DIR$/tracksheet/templatetags" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tracksheet/templates/tracksheet/" />
       <recent name="$PROJECT_DIR$/tracksheet/templates" />
       <recent name="$PROJECT_DIR$/trackdata/templates" />
       <recent name="$PROJECT_DIR$/tracksheet/templates/registration" />
       <recent name="$PROJECT_DIR$/tracksheet/templates/tracksheet" />
-      <recent name="$PROJECT_DIR$/trackdata/templates/trackdata" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tracksheet" />
+      <recent name="$PROJECT_DIR$/tracksheet/templatetags" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -430,7 +562,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="trackdata" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
-      <option name="PARAMETERS" value="runserver 192.168.11.228:8000" />
+      <option name="PARAMETERS" value="runserver 172.16.2.131:8000" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
@@ -485,7 +617,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -507,19 +639,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="465" width="1871" height="1092" extended-state="6" />
-    <editor active="true" />
+    <frame x="50" y="-11" width="1871" height="1092" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2117389" sideWeight="0.49019608" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2303665" sideWeight="0.5057597" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2627537" sideWeight="0.49019608" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.49808007" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5109948" sideWeight="0.50466263" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28062826" sideWeight="0.49533737" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3183246" sideWeight="0.49643445" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.4947888" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2495886" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49528795" sideWeight="0.49424025" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22161272" sideWeight="0.50980395" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28691098" sideWeight="0.49424025" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.4958859" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22161272" sideWeight="0.50980395" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -583,214 +714,79 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/avatars/superadmin/resized/80/39319928-developer-wallpapers.png" />
-    <entry file="file://$PROJECT_DIR$/avatars/superadmin/resized/100/39319928-developer-wallpapers.png" />
-    <entry file="file://$PROJECT_DIR$/trackdata/static/tracksheet/dist/img/avatar.png" />
     <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/imagecheckout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" column="10" lean-forward="true" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0002_auto_20171108_1145.py">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/messages/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/static/tracksheet/dist/img/avatar/03d7e14f37c721a3e013244e96fc0131/80x80_circle.png" />
-    <entry file="file://$PROJECT_DIR$/myfolder/03d7e14f37c721a3e013244e96fc0131/80x80_circle.png" />
-    <entry file="file://$PROJECT_DIR$/avatars/03d7e14f37c721a3e013244e96fc0131/80x80_circle.png" />
-    <entry file="file://$PROJECT_DIR$/tracksheet/media/avatars/03d7e14f37c721a3e013244e96fc0131/100x100_circle@2x.png" />
-    <entry file="file://$PROJECT_DIR$/tracksheet/media/avatars/03d7e14f37c721a3e013244e96fc0131/18x18_circle.png" />
-    <entry file="file://$PROJECT_DIR$/tracksheet/media/avatars/03d7e14f37c721a3e013244e96fc0131/19x19_square.jpg" />
-    <entry file="file://$PROJECT_DIR$/tracksheet/media/avatars/03d7e14f37c721a3e013244e96fc0131/200x200_square.jpg" />
-    <entry file="file://$PROJECT_DIR$/tracksheet/avatar_backend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/hometheme.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="83" column="36" lean-forward="true" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/package_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/project_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/registration/logout.html">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/admin/base_site.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/image_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/charts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/calender.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trackdata/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="684">
+          <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/registration/password_reset_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trackdata/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="68" column="32" lean-forward="true" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/registration/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="52" column="23" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/profile.html">
+    <entry file="file://$PROJECT_DIR$/tracksheet/static/tracksheet/dist/css/font_roboto.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="88" column="14" lean-forward="true" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/editcheckout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/admin/base_site.html">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/js.html" />
+    <entry file="file://$PROJECT_DIR$/ENV/pip-selfcheck.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/article.html">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/item_edit_form_success.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        <state relative-caret-position="324">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/assign_table.html">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/item_edit_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        <state relative-caret-position="558">
+          <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/tests.py">
+    <entry file="file://$PROJECT_DIR$/tracksheet/mixins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/tables.py">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/item_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="130" column="16" lean-forward="true" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="504">
+          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -801,35 +797,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/urls.py">
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/urls.py" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/views.py" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/tests.py" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/README.md" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/models.py" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/admin.py" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/templatetags/aidsbank_tags.py" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/.idea/dictionaries/pc84.xml" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/.idea/modules.xml" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/.idea/workspace.xml" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/.idea/misc.xml" />
+    <entry file="file://$PROJECT_DIR$/aidsbank-master/.idea/aidsbank-master.iml" />
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0010_auto_20180412_1200.py" />
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0009_checkout_no_of_mistakes.py" />
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0008_auto_20180412_1055.py" />
+    <entry file="file://$PROJECT_DIR$/tracksheet/migrations/0007_auto_20180411_1554.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="55" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/filters.py">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/package_table.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="414">
+          <caret line="23" column="73" lean-forward="false" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/admin.py">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/project_table.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="70" column="53" lean-forward="false" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="378">
+          <caret line="21" column="73" lean-forward="false" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/registration/index.html">
+    <entry file="file://$PROJECT_DIR$/tracksheet/tables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="44" column="20" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1458">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/checkout_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="76" lean-forward="false" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/image-graph.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-770">
+          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/charts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -838,91 +871,126 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracksheet/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="32" column="70" lean-forward="false" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="70" />
+        <state relative-caret-position="2754">
+          <caret line="159" column="36" lean-forward="false" selection-start-line="159" selection-start-column="36" selection-end-line="159" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/assign_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/addcheckout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/image-graph.html">
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/editcheckout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1818">
-          <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+        <state relative-caret-position="1134">
+          <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="422" column="45" lean-forward="false" selection-start-line="422" selection-start-column="32" selection-end-line="422" selection-end-column="45" />
+        <state relative-caret-position="2664">
+          <caret line="401" column="31" lean-forward="false" selection-start-line="401" selection-start-column="31" selection-end-line="401" selection-end-column="31" />
           <folding>
-            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1602">
-          <caret line="89" column="34" lean-forward="false" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#li#2;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#li#3;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#li#4;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#li#5;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracksheet/templatetags/tags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
-          <folding>
-            <element signature="e#42#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trackdata/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tracksheet/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="36" column="10" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+        <state relative-caret-position="2970">
+          <caret line="191" column="9" lean-forward="false" selection-start-line="191" selection-start-column="9" selection-end-line="191" selection-end-column="9" />
           <folding>
-            <element signature="e#0#81#0" expanded="true" />
-            <element signature="e#3967#4161#0" expanded="false" />
-            <element signature="e#4200#4268#0" expanded="false" />
-            <element signature="e#4312#5360#0" expanded="false" />
-            <element signature="e#5597#6921#0" expanded="false" />
-            <element signature="e#6961#9023#0" expanded="false" />
+            <marker date="1525926032467" expanded="true" signature="4133:4370" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tracksheet/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="1872">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2682">
+          <caret line="149" column="29" lean-forward="false" selection-start-line="149" selection-start-column="29" selection-end-line="149" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trackdata/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="167" column="57" lean-forward="true" selection-start-line="167" selection-start-column="57" selection-end-line="167" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templatetags/tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding>
+            <element signature="e#42#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/image_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="66" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracksheet/templates/tracksheet/pagination_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="60" column="17" lean-forward="false" selection-start-line="58" selection-start-column="12" selection-end-line="60" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

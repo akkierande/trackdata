@@ -1,4 +1,4 @@
-#!/home/pc84/PycharmProjects/trackdata/ENV/bin/python
+#!/home/pc84/PycharmProjects/trackdata/ENV/bin/python2.7
 
 # -*- coding: utf-8 -*-
 import re

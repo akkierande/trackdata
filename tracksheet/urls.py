@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import url,include
 from . import views
-from .views import get_data,HomeView,DisplayView
+from .views import get_data,HomeView,DisplayView,myexport
 
 
 urlpatterns = [
@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^images/chart/$', DisplayView.as_view(), name='graphs'),
     #url(r'^images/data/$', get_data, name='data'),
     #url(r'^images/chart/data/$', ChartData.as_view()),
-    url(r'^assign/$', views.MyimageView, name='assignment'),
+    url(r'^assign/$', views.Assign_Table.as_view(), name='assignment'),
 
     url(r'^packages/$', views.Package_Table.as_view(), name='packages'),
     url(r'^projects/$', views.Project_Table.as_view(), name='projects'),
@@ -31,4 +31,8 @@ urlpatterns = [
     url(r'^checkout/add/(?P<pk>\d+)/$', views.addCheckout, name='add_checkout'),
     url(r'^checkout/edit/(?P<pk>\d+)/$', views.editCheckout, name='edit_checkout'),
     #url(r'^packages/delete/(?P<pk>\d+)/$', views.package_delete, name='package_delete'),
+    url(r'^messages/', include('django_messages.urls')),
+    url(r'^myexport/$', myexport, name='myexport'),
+    url(r'^items/(?P<pk>\d+)/$',views.ItemListView,name='item'),
+    url(r'^items/edit/(?P<pk>\d+)/$', views.ItemUpdateView, name='update'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,3 @@
+<a href="{% url 'pinax_messages:inbox' %}"><i class="fa fa-envelope"></i> {% trans "Message Inbox" %}</a>
+<a href="{% url 'pinax_messages:thread_detail' thread.pk %}"><i class="fa fa-envelope"></i> {% trans "View Message Thread" %}</a>
+<a href="{% url "pinax_messages:message_user_create" user_id=object.user.id %}" class="btn btn-default">Message this user</a>
